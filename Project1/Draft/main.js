@@ -3,9 +3,12 @@
 let drawingWidth = 500;
 let drawingHeight = 500;
 
+
+
+
 // place of the bugbody
-let bx = 200;     
-let by = 250;       
+let bx = drawingWidth/2;     
+let by = drawingHeight/2;       
 
 
 
@@ -13,6 +16,13 @@ let drawing = d3.select("#canvas")
     .append("svg")
     .attr("width", drawingWidth)
     .attr("height", drawingHeight);
+
+drawing.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", drawingWidth)
+    .attr("height", drawingHeight)
+    .attr("fill", "lightblue"); 
 
 // headfirst
 let headBottomW = 60;  
@@ -53,8 +63,8 @@ let bugWingMiddle = drawing.append("line")
 
 // spotleft1
 let spotR = 15;
-let spx = 180;     
-let spy = 230;     
+let spx = bx-20;     
+let spy = by-20;     
 
 let spotLeft1 = drawing.append("circle")
     .attr("cx", spx)
@@ -103,60 +113,75 @@ let bugEyeright = drawing.append("circle")
 
 
 // bug feet
-let bugFootleft1 = drawing.append ("line")
+let bugFootLeft1 = drawing.append ("line")
     .attr("x1", bx-80)
     .attr("y1", by-50)
     .attr("x2", bx-35)
     .attr("y2", by-20)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
-let bugFootleft2 = drawing.append ("line")
+let bugFootLeft2 = drawing.append ("line")
     .attr("x1", bx-80)
     .attr("y1", by-10)
     .attr("x2", bx-35)
     .attr("y2", by-10)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
-let bugFootleft3 = drawing.append ("line")
-    .attr("x1", bx-80)
+let bugFootLeft3 = drawing.append ("line")
+    .attr("x1", bx-60)
     .attr("y1", by+30)
     .attr("x2", bx-35)
     .attr("y2", by+10)
+    .attr("stroke", "black")
+    .attr("stroke-width", 1);
+let bugFootLeftBottom = drawing.append ("line")
+    .attr("x1", bx-60)
+    .attr("y1", by+30)
+    .attr("x2", bx-70)
+    .attr("y2", by+60)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
 
-let bugFootright1 = drawing.append ("line")
+
+let bugFootRight1 = drawing.append ("line")
     .attr("x1", bx+80)
     .attr("y1", by-50)
     .attr("x2", bx+35)
     .attr("y2", by-20)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
-let bugFootright2 = drawing.append ("line")
+let bugFootRight2 = drawing.append ("line")
     .attr("x1", bx+80)
     .attr("y1", by-10)
     .attr("x2", bx+35)
     .attr("y2", by-10)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
-let bugFootright3 = drawing.append ("line")
-    .attr("x1", bx+80)
+let bugFootRight3 = drawing.append ("line")
+    .attr("x1", bx+60)
     .attr("y1", by+30)
     .attr("x2", bx+35)
     .attr("y2", by+10)
+    .attr("stroke", "black")
+    .attr("stroke-width", 1);
+let bugFootRightBottom = drawing.append ("line")
+    .attr("x1", bx+60)
+    .attr("y1", by+30)
+    .attr("x2", bx+70)
+    .attr("y2", by+60)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
 
 
 // bug antennae
-let bugAntennaeleft = drawing.append ("line")
+let bugAntennaeLeft = drawing.append ("line")
     .attr("x1", bx-10)
     .attr("y1", by-100)
     .attr("x2", bx-5)
     .attr("y2", by-70)
     .attr("stroke", "black")
     .attr("stroke-width", 1);
-let bugAntennaeright = drawing.append ("line")
+let bugAntennaeRight = drawing.append ("line")
     .attr("x1", bx+10)
     .attr("y1", by-100)
     .attr("x2", bx+5)

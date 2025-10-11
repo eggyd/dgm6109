@@ -1,0 +1,98 @@
+/* References:
+   https://developer.mozilla.org/en-US/docs/Web/CSS
+   Neon effect inspired by https://codepen.io/MDJAmin/pen/GgpdKPy
+*/
+
+/* Base Style */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+  background-color: #000; /* Dark background for neon effect */
+  color: #fff;
+  text-align: center;
+}
+
+/* Spacing */
+h1, h2, h3, h4, p, figure {
+  margin-bottom: 16px;
+}
+
+/* link hover */
+a {
+  color: #66ccff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: #ff66cc;
+  text-decoration: underline;
+}
+
+/* image link hover */
+a img {
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+a:hover img, a:focus img {
+  transform: scale(1.1);
+  border: 2px solid #ff66cc;
+}
+
+/* Paragraph width*/
+p {
+  max-width: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/*  neon text animation */
+.neon-text {
+  font-size: 80px;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #ff0000,     /* inner red glow */
+    0 0 20px #ff0000,
+    0 0 40px #0066ff,     /* outer blue glow */
+    0 0 80px #0066ff,
+    0 0 100px #0066ff,
+    0 0 150px #0066ff;
+  animation: flickerUSA 2s infinite alternate;
+}
+
+@keyframes flickerUSA {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 40px #0066ff,
+      0 0 80px #0066ff,
+      0 0 100px #0066ff,
+      0 0 150px #0066ff;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+/*header style */
+h2, h3, h4 {
+  color: #66c9ff;
+  letter-spacing: 1px;
+}

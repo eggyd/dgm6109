@@ -1,0 +1,31 @@
+
+
+Invalid card number:
+cardNumber = 12345
+cardCCV = 123 
+→ "Please enter 6-digit card number."
+
+Invalid CCV:
+cardNumber = 123456
+cardCCV = 12 
+→ "Please enter 3-digit CCV."
+
+CCV mismatch:
+cardNumber = 123456
+cardCCV = 000 
+→ "Incorrect credit card information."
+
+Retail booster pack (price < 50):
+cardNumber = 123123
+cardCCV = 345 
+→ $7.00 ($5 original price add $2 shipping)
+
+Starter pack (price = 50)
+cardNumber = 123123
+cardCCV = 345
+→ $50.00 (free shipping).
+
+1st edition complete set (price > 1000)
+cardNumber = 123123
+cardCCV = 345 
+→ "Price exceeds credit limit."

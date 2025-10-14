@@ -4,7 +4,7 @@ let cardType, cardNumber, cardCCV;
 
 
 
-document.getElementById("submit").addEventListener("click", processForm);
+document.getElementById("submit").addEventListener("click", processFormValues);
 
 document.getElementById("reset").addEventListener("click", function () {
     clear();
@@ -14,28 +14,25 @@ document.getElementById("reset").addEventListener("click", function () {
 
 
 ///Collect inputs, validate them and evaluate answers
-function processForm() {
-
-   
-
+function processFormValues() {
   cardType = document.getElementById("CardType").value;
   cardNumber = document.getElementById("cardNumber").value;
   cardCCV = document.getElementById("cardCCV").value;
+  processData();
+}
 
-   let evaluationCompleted = false;
+function processData() {
+  let evaluationCompleted = false;
+  if (validateData()) {
+    evaluationCompleted = evaluateAnswers();
+  }
 
-    
-
-    if (validateData()) {
-        evaluationCompleted = evaluateAnswers();
-    }
-
-    if (evaluationCompleted) {
-        document.getElementById("submit").toggleAttribute("hidden");
-        document.getElementById("reset").toggleAttribute("hidden");
-    } else {
-        rule();
-    }
+  if (evaluationCompleted) {
+    document.getElementById("submit").toggleAttribute("hidden");
+    document.getElementById("reset").toggleAttribute("hidden");
+  } else {
+    rule();
+  }
 }
 
 
@@ -102,7 +99,7 @@ function evaluateAnswers() {
   }
 
    
-    // free shipping 
+    // free shippin
       output(
     'Your card pack for "Magic: The Gathering" will be delivered to you as soon as possible.' +
       "Your credit card will be billed a total of $" +

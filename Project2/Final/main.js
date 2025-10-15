@@ -52,10 +52,16 @@ function validateData() {
   }
 
  // Check CCV rules
+ //I used parseInt() to make sure I’m comparing and adding numbers, not strings, when checking the CCV rules
+ //parseInt() is used to convert a string into a number
   let s1 = parseInt(cardNumber.slice(0, 1)) + parseInt(cardNumber.slice(1, 2));
   let s2 = parseInt(cardNumber.slice(2, 3)) + parseInt(cardNumber.slice(3, 4));
   let s3 = parseInt(cardNumber.slice(4, 5)) + parseInt(cardNumber.slice(5, 6));
+//slice() method is used to extract specific parts of a string
 
+//By combining slice() and parseInt()
+// I can take out each digit from the credit card number as a separate number,
+// and then use them to calculate
   if (
     parseInt(cardCCV.slice(0, 1)) !== s1 ||
     parseInt(cardCCV.slice(1, 2)) !== s2 ||

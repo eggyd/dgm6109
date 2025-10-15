@@ -103,6 +103,9 @@ function evaluateAnswers() {
     );
     return true;
   }
+//I actually learned “to fixed" from an AI tool
+// It told me that toFixed(2) makes sure a number always shows two digits after the decimal point 
+// for example, turning 8 into "8.00".
 
    
     // free shippin

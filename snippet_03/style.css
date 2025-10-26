@@ -133,64 +133,96 @@ html {
 
 /*  MEDIA layout*/
 
-/* Mobile */
+/* Mobile: up to 480px */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
-    padding: 10px;
+    padding: 0;
   }
 
   .theHeader {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .mybrand {
+    font-size: 18px;
   }
 
   .main-menu {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 10px;
   }
 
-  iframe, img {
+  .pageMain {
+    padding: 20px;
+  }
+
+  input, button, iframe, img {
     width: 100%;
-    height: auto;
+    max-width: 100%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+/* tablet / Mid-size screens: 481px – 1023px */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .pageMain {
+    padding: 40px;
+  }
+
+  .theHeader {
+    padding: 15px 30px;
+  }
+
+  .main-menu {
+    gap: 20px;
   }
 
   input {
-    width: 100%;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) and (max-width: 1919px) {
-  .pageMain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #online-vet {
-    max-width: 700px;
+    width: 80%;
   }
 
   iframe {
-    width: 80%;
+    width: 100%;
+    height: 350px;
   }
 }
 
-/* Large screen*/
-@media (min-width: 1920px) {
+/* large screen: 1024px and up */
+@media (min-width: 1024px) {
   body {
-    max-width: 1600px;
-    margin: auto;
+    font-size: 16px;
   }
 
   .pageMain {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    align-items: start;
+  }
+
+  section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
 
   iframe {
     width: 100%;
+    height: 400px;
   }
 }

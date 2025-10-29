@@ -114,7 +114,20 @@ button:hover {
   background-color: #FFEB3B;
   transform: translateY(-2px);
 }
-/* I learned the button hover effect fromhttps://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover */
+/* I learned the button hover effect from https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover */
+
+
+/* image hover */
+img {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+
+img:hover {
+  border-color: #FFD54F; 
+}
 
 /* Footer  */
 .pageEnd {
@@ -130,3 +143,4 @@ button:hover {
 html {
   scroll-behavior: smooth;
 }
+

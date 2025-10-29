@@ -116,6 +116,18 @@ button:hover {
 }
 /* I learned the button hover effect from https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover */
 
+/* image hover */
+img {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+
+img:hover {
+  border-color: #FFD54F; 
+}
+
 /* Footer  */
 .pageEnd {
   text-align: center;
@@ -136,10 +148,11 @@ html {
 /* Mobile: up to 480px */
 @media (max-width: 480px) {
   body {
+/* Smaller text and remove extra padding.  */
     font-size: 14px;
     padding: 0;
   }
-
+/* Stack header vertically */
   .theHeader {
     flex-direction: column;
     align-items: flex-start;
@@ -151,6 +164,7 @@ html {
   }
 
   .main-menu {
+    /* Change menu to vertical list. */
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -162,6 +176,7 @@ html {
   }
 
   input, button, iframe, img {
+    /* Full width for input, images, and map. */
     width: 100%;
     max-width: 100%;
   }
@@ -175,15 +190,18 @@ html {
     font-size: 18px;
     text-align: left;
   }
+  
 }
 
 /* tablet / Mid-size screens: 481px – 1023px */
 @media (min-width: 481px) and (max-width: 1023px) {
   .pageMain {
+    /*  moderate spacing. */
     padding: 40px;
   }
 
   .theHeader {
+    /* horizontal but slightly tighter. */
     padding: 15px 30px;
   }
 
@@ -192,6 +210,7 @@ html {
   }
 
   input {
+    /* Fit better on medium screens. */
     width: 80%;
   }
 
@@ -204,22 +223,18 @@ html {
 /* large screen: 1024px and up */
 @media (min-width: 1024px) {
   body {
+    /* Larger font for reading */
     font-size: 16px;
   }
 
   .pageMain {
+    /* 2 column grid layout. */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: start;
   }
 
-  section {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  }
 
   iframe {
     width: 100%;

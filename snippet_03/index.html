@@ -1,13 +1,13 @@
-<!--
+<!-- /*
 Your Online Pet Doctor
 Author: Qing Dan
-Project 1 (Snippet_03)
+Project 1
 Date: 2025-10-26
 References:
-1. Sticky Header: https://www.w3schools.com/howto/howto_js_sticky_header.asp
-2. Hover underline animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/
-3. Hoverable Buttons: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover
--->
+1. How TO - On Scroll Header https://www.w3schools.com/howto/howto_js_sticky_header.asp
+2. Hover underline animation https://www.30secondsofcode.org/css/s/hover-underline-animation/
+3. Hoverable Buttons https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover
+*/ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,19 +16,20 @@ References:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Online Pet Doctor</title>
 
+
   <link rel="icon" href="pawicon.png" type="image/png">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- for my brand -->
+<!-- for my brand -->
   <header class="theHeader">
     <div class="mybrand">
       <img src="pawicon.png" alt="pawlogo" width="30">
       <span>Your Online Pet Doctor</span>
     </div>
-
-    <!-- for main menu -->
+<!-- for main menu -->
     <nav class="main-menu">
       <a href="#share">Share your experience</a>
       <a href="#online-vet">Online Vet</a>
@@ -39,26 +40,26 @@ References:
   
   <!-- main part of my website -->
   <main class="pageMain">
-
-    <!-- Ads and introduction -->
-    <section class="Ads">
-      <h2>Pet Test Kit Introduction</h2>
-      <p>
-        We care about your furry friends and let you get the results you want in the fastest and most urgent moment, 
-        eliminating the time wasted waiting in line for offline hospital appointments. 
-        Need to test at home? Click here
-        <a href="https://www.amazon.ca/Innovative-Pet-Lab-Inflammation-Evaluation/dp/B0CNQ8G6NC" target="_blank">
-          Test Kit for Dogs & Cats
-        </a>
-        to go!
-      </p>
-    </section>
+   
+    <!--  Ads of testkit and introduction--> 
+    <section class="Ads-of-testkit-and-introduction">
+    <h2>Testkit and Introduction</h2>
+    <p>
+      We care about your furry friends and let you get the results you want in the fastest and most urgent moment, 
+      eliminating the time wasted waiting in line for offline hospital appointments. 
+      Need to test at home? Click here
+      <a href="https://www.amazon.ca/Innovative-Pet-Lab-Inflammation-Evaluation/dp/B0CNQ8G6NC" target="_blank">
+        Test Kit for Dogs & Cats
+      </a>
+      to go!
+    </p>
+  </section>
   
     <!-- share owners' experience -->
     <section id="share">
-      <h2>Useful Experience</h2>
+      <h1>Useful Experience</h1>
       <p>
-       @Alice (Biggie's mom):<br>
+       @Alice(Biggie's mom):<br>
        "Dental health is important, but can often be overlooked.<br>
        Cleaning your dog's gums and tissue around the teeth is a critical part of having a happy pup.<br>
        Bacteria in the mouth can get into the bloodstream and cause diseases in other organs, such as the heart or kidneys.<br>
@@ -69,77 +70,85 @@ References:
     <!-- online vet -->
     <section id="online-vet">
       <h2>Professional Veterinarians</h2>
-      <label for="pet-issue">My pet isn't feeling well:</label>
-      <input id="pet-issue" type="text" placeholder="Please describe your pet's issue">
+      <!-- type in  -->
+      <label for="pet-issue">My pet isn't feeling well</label>
+      <input id="pet-issue" type="text" placeholder="Please describe your pet's issue" >
+      <!-- button -->
       <button>Online consultation</button>
     </section>
 
     <!-- nearest hospital -->
     <section id="map">
-      <h2>Nearest Veterinary Hospital</h2>
-      <p>Find your nearest veterinary hospital below:</p>
-      <!-- Steps I followed to embed Google Map:
-      1. Open Google Maps and search for "Vancouver Veterinary Hospital".
-      2. Click “Share” → choose “Embed a map”.
-      3. Copy the iframe code.
-      4. Paste it below to display the map. -->
+      <h3>hospital map</h3>
+      <p>Find Your nearest veterinary hospital</p>
+      <!-- Steps I followed to learn this:
+1. Open Google Maps and search for "Vancouver Veterinary Hospital".
+2. Click “Share” → choose “Embed a map”.
+3. Copy the iframe code provided by Google.
+4. Paste it into my webpage to display the map directly. -->
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10415.169747076428!2d-123.12573597427766!3d49.28272970294285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d6ad1e0b19%3A0x4a8a2d60f9877310!2sVancouver%20Veterinary%20Hospital!5e0!3m2!1sen!2sca!4v1700000000000"
-        width="600"
-        height="450"
-        style="border:0; border-radius:8px; margin-top:10px;"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10415.169747076428!2d-123.12573597427766!3d49.28272970294285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d6ad1e0b19%3A0x4a8a2d60f9877310!2sVancouver%20Veterinary%20Hospital!5e0!3m2!1sen!2sca!4v1700000000000"
+  width="600"
+  height="450"
+  style="border:0; border-radius: 8px; margin-top: 10px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
     </section>
 
-    <!-- about us -->
-    <section id="about">
-      <h2>About Our Veterinarians</h2>
+    <!-- about us（show professionalism） -->
+     <section id="about">
+      <!-- Click to view doctor qualifications  -->
+      <h4>Vet's certificate and introduction</h4>
       <a href="#about">
         <img src="pet-doctor.jpg" alt="Click to view doctor qualifications" width="300">
       </a>
-      <p>Here you can find the qualifications, certificates, and areas of expertise of our veterinarians.</p>
     </section>
 
     <!-- pet disease classification -->
-    <section id="disease">
-      <h2 onclick="toggleList()" style="cursor: pointer;">Common Pet Diseases ⬇️</h2>
+  <section id="disease">
+    <h3 onclick="toggleList()" style="cursor: pointer;">
+    Common Pet Disease ⬇️
+    </h3>
 
-      <ul id="disease-list" style="display: none;">
-        <li>Skin diseases and allergies</li>
-        <li>Gastroenteritis</li>
-        <li>Urinary problems</li>
-        <li>Oral diseases</li>
-        <li>Joint pain</li>
-      </ul>
-
-      <a href="https://www.aslvets.co.uk/veterinary-services/" target="_blank">
-        <img src="commonDisease.jpg" alt="Veterinary services link" width="400" style="border-radius:8px; margin-top:15px;">
-      </a>
-
-      <script>
-      function toggleList() {
-        const list = document.getElementById('disease-list');
-        const header = document.querySelector('#disease h2');
-        if (list.style.display === 'none') {
-          list.style.display = 'block';
-          header.textContent = 'Common Pet Diseases ⬆️';
-        } else {
-          list.style.display = 'none';
-          header.textContent = 'Common Pet Diseases ⬇️';
-        }
+     <!--disease list -->
+    <ul id="disease-list" style="display: none;">
+      <!-- The title is clickable. When clicked, it runs the JavaScript function "toggleList()". -->
+      <!-- I learned this dropdown method from AI tools by searching “dropdown list display” -->
+    <li>Skin diseases and allergies</li>
+    <li>Gastroenteritis</li>
+    <li>Urinary problems</li>
+    <li>Oral diseases</li>
+    <li>Joint pain</li>
+    </ul>
+    <p>Click the image below to see more health information:</p>
+    <a href="https://www.aslvets.co.uk/veterinary-services/" target="_blank">
+    <img src="commonDisease.jpg" alt="Veterinary services link" width="400" style="border-radius: 8px; margin-top: 15px;">
+  </a>
+   <!-- function toggleList -->
+    <script>
+    function toggleList() {
+      const list = document.getElementById('disease-list');
+      const header = document.querySelector('#disease h3');
+       // it checks whether the list is visible or hidden
+     // If hidden → show it and change the arrow to "⬆️"
+      if (list.style.display === 'none') {
+        list.style.display = 'block';
+        header.textContent = 'Common Pet Disease ⬆️';
+      // If visible → hide it and change the arrow back to "⬇️"
+      } else {
+        list.style.display = 'none';
+        header.textContent = 'Common Pet Disease ⬇️';
       }
-      </script>
-    </section>
-
-  </main> 
-
-  <footer class="pageEnd">
-    <p>Powered by DaniDan © 2023–2025 Vancouver Best Online Pet Symptom Checker Ever, All rights reserved.</p>
+    }
+    </script>
+  </section>
+</main>
+    <footer class="pageEnd">
+    <p>Powered by DaniDan
+© 2023-2025 Vancouver Best Online Pet Symptom Checker Ever, All rights reserved. </p>
   </footer>
 
 </body>
 </html>
-

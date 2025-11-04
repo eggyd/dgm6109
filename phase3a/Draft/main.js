@@ -92,9 +92,11 @@ svg.selectAll("circle")
 
 
 //Uss D3’s axis generators 
-svg.append("g")
-  .attr("transform", "translate(0," + (svgHeight - margin) + ")")
-  .call(d3.axisBottom(xScale));
+
+svg.append("g") //append a new group element to the SVG as a container for the X-axis
+  .attr("transform", "translate(0," + (svgHeight - margin) + ")") //move the X-axis to the bottom of the drawing area
+  .call(d3.axisBottom(xScale)); //generate the X-axis using the xScale
+
 
 svg.append("text")
   .attr("x", svgWidth / 2)                    
@@ -128,19 +130,19 @@ svg.append("text")
 
 svg.append("text")
   .attr("x", svgWidth - margin - 30)
-  .attr("y", svgHeight - margin + 15)
+  .attr("y", svgHeight - margin + 24)
   .style("font-size", "10px")
   .text("max duration");  //  max X value 
 
 svg.append("text")
   .attr("x", margin - 15)
-  .attr("y", margin)
+  .attr("y", margin-5)
   .style("font-size", "10px")
   .text("Mood = 5");  //max Y value
 
 svg.append("text")
-  .attr("x", margin + 5)
-  .attr("y", svgHeight - margin + 15)
+  .attr("x", margin )
+  .attr("y", svgHeight - margin + 24)
   .style("font-size", "10px")
   .text("Mood = 0");  // min Y value
 

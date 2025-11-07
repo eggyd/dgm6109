@@ -1,6 +1,6 @@
 "use strict";
 
-let svgWidth = 800;
+let svgWidth = 900;
 let svgHeight = 550;
 let margin = 60;
 
@@ -127,8 +127,8 @@ svg.append("text")
   .text("Focus (0–5) ");
 
 /* Legend: Mood (Color) */
-let colorKeyX = margin + 40;
-let colorKeyY = svgHeight - margin - 35; 
+let colorKeyX = svgWidth - margin - 180; 
+let colorKeyY = svgHeight - margin - 80; 
 
 //  title
 svg.append("text")
@@ -136,6 +136,18 @@ svg.append("text")
   .attr("y", colorKeyY - 15)
   .style("font-weight", "bold")
   .text("Mood (blue to red)");
+
+// background 
+svg.append("rect")
+  .attr("x", colorKeyX - 25)
+  .attr("y", colorKeyY - 35)
+  .attr("width", 210)
+  .attr("height", 70)
+  .attr("fill", "rgba(255, 255, 255, 0)")
+  .attr("stroke", "black")
+  .attr("stroke-width", 1.2)
+  .attr("rx", 8)
+  .attr("ry", 8);
 
 // color circles and labels
 let moodValues = [1, 3, 5];
@@ -155,8 +167,19 @@ for (let i = 0; i < moodValues.length; i++) {
 }
 
 /* Legend: Stress */
-let keyX = svgWidth - margin - 200;
-let keyY = svgHeight - margin - 25; 
+let keyX = svgWidth - margin - 180;   
+let keyY = svgHeight - margin - 160;
+
+svg.append("rect")
+  .attr("x", keyX - 25)
+  .attr("y", keyY - 35)
+  .attr("width", 210)
+  .attr("height", 70)
+  .attr("fill", "rgba(255,255,255,0.9)")
+  .attr("stroke", "black")
+  .attr("stroke-width", 1.2)
+  .attr("rx", 8)
+  .attr("ry", 8);
 
 // title
 svg.append("text")
@@ -174,7 +197,7 @@ for (let i = 0; i < stressValues.length; i++) {
   let r = rScale(stressValues[i]);
 
   let stressCircle = svg.append("circle")
-    .attr("cx", cx)
+    .attr("cx", cx - 25)
     .attr("cy", keyY)
     .attr("r", r)
     .attr("fill", "#66b3ff")
@@ -184,7 +207,7 @@ for (let i = 0; i < stressValues.length; i++) {
 // Label text
   let label = svg.append("text")
     .text(stressValues[i])
-    .attr("x", cx + r + 5)
+    .attr("x", cx + r -20)
     .attr("y", keyY + 4)
     .style("font-size", "11px");
 

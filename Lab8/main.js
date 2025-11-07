@@ -216,10 +216,10 @@ for (let i = 0; i < stressValues.length; i++) {
   // dividing by 3 is a heuristic that avoids over-spacing.
 }
 
-svg.append("text")
-  .attr("x", svgWidth - 260)
-  .attr("y", svgHeight - 15)
-  .style("font-size", "11px")
-  .style("fill", "gray")
-  .text("Sorted by stress descending (from high to low)");
+// svg.append("text")
+//   .attr("x", svgWidth - 260)
+//   .attr("y", svgHeight - 15)
+//   .style("font-size", "11px")
+//   .style("fill", "gray")
+//   .text("Sorted by stress descending (from high to low)");
 

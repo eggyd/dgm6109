@@ -18,14 +18,14 @@ svg.append("rect")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
 
-svg.append("rect")
-  .attr("fill", "none")
-  .attr("stroke", "gray")
-  .attr("stroke-dasharray", "5")
-  .attr("x", margin)
-  .attr("y", margin)
-  .attr("width", svgWidth - margin * 2)
-  .attr("height", svgHeight - margin * 2);
+// svg.append("rect")
+//   .attr("fill", "none")
+//   .attr("stroke", "gray")
+//   .attr("stroke-dasharray", "5")
+//   .attr("x", margin)
+//   .attr("y", margin)
+//   .attr("width", svgWidth - margin * 2)
+//   .attr("height", svgHeight - margin * 2);
 
 
 let FANG = [

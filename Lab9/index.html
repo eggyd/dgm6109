@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Qing Dan — Lab 9: Best Two Scatterplots</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: fill (180deg, #f8fbff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 28px;
+      color: #3a3a3a;
+      letter-spacing: 0.5px;
+    }
+
+    p.description {
+      color: #666;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .link-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 12px;
+      background: white;
+      color: #3b59f0;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: #3b59f0;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(59,89,240,0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Qing Dan — Lab 9: Best Two Scatterplots</h1>
+   <p class="description">
+    My dataset was collected to explore the relationship between <b>personality types</b> and <b>music listening habits</b>, 
+    as well as how music influences people’s emotions and focus differently. <br> 
+    Each participant recorded their <b>MBTI personality type</b>, along with details such as listening duration (minutes per day), 
+    music genre, and self-reported scores of<br> <b>Mood</b>, <b>Focus</b>, and <b>Stress</b> (0–5 scale) after listening.<br>  
+    By analyzing these variables, I want to understand whether people with different personality traits 
+    (<i>introverted vs. extroverted</i>, <i>thinking vs. feeling</i> types, etc.)<br> show distinct patterns 
+    in their listening behavior, emotional responses, and levels of focus.
+  </p>
+
+  <div class="link-container">
+    <a href="./plot1">Plot 1 – Does Longer Music Listening Reduce Stress? (I vs E)</a>
+    <a href="./plot2">Plot 2 – Does Music Genre Affect Focus? (Lo-fi vs Hardstyle)</a>
+  </div>
+
+</body>
+</html>

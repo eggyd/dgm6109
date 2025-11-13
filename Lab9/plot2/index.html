@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[Qing Dan — Lab #9: Does Music Genre Affect Focus? (Lo-fi vs Hardstyle)]</title>
+  <script src="d3.min.js"></script>
+</head>
+
+<body>
+  <div id="container" style="margin: 0 auto; text-align:center;">
+
+    <h1 style="text-align:center">Does Music Genre Affect Focus? (Lo-fi vs Hardstyle, Oct 17–20)</h1>
+    <p style="text-align:center">
+      Different types of music influence people's emotional and cognitive states in different ways.<br>
+      Relaxing genres such as <b>Lo-fi</b> tend to improve focus, 
+      while energetic genres such as <b>Hardstyle</b> lead to lower focus levels.
+    </p>
+    <p style="text-align:center; color:#777; font-size:14px;">
+     This visualization extends the original question by introducing mood level represented by bubble size. <br>
+     It explores how different music genres influence not only focus but also emotional state.<br>
+     when focus is high, does mood tend to drop? <br>
+     And when the mood is elevated, could excitement make it harder to stay concentrated?
+    </p>
+    <div id="canvas"></div>
+
+    <p style="text-align:center; max-width:720px; margin:0 auto; color:#797878;">
+      I chose this visualization because, like <b>Plot 1</b>, it maintains a clean and balanced layout, 
+      using the <b>four-margin method</b> in D3.js to achieve consistent spacing and alignment. 
+      I also implemented both <b>sorting</b> and <b>filtering</b> functions to refine the dataset, 
+      ensuring that the plotted relationships remain accurate and focused.  
+      <br><br>
+      Beyond data structure, this chart integrates <b>interactive hover effects</b> 
+      and a continuous <b>transition animation</b> that makes the bubbles and legend gently pulse in color.  
+      This rhythmic motion was designed deliberately to echo the theme of <b>music</b>
+      allowing feel more alive and conceptually connected to its subject.
+    </p>
+
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
+

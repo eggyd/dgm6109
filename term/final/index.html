@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualization Proposals - Term Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .sketch {
+      margin-bottom: 50px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Three Visualization Proposals</h1>
+  <p>Qing Dan<br>Date: November 9th 2025</p>
+
+  <div class="sketch">
+    <h2>Sketch 1: Does Longer Music Listening Reduce Stress (I vs E)?</h2>
+    <p><b>Hypothesis:</b> People with introverted (I) personalities tend to experience a stronger stress-reduction effect from longer music listening, compared to extroverted (E) personalities.</p>
+    <p>The <b>X-axis</b> represents <b>Listening Duration (minutes)</b>, ranging from 0 to 90.<br>
+    The <b>Y-axis</b> represents <b>Perceived Stress (0–5)</b>, where 0 means “almost no stress” and 5 means “very high stress.”</p>
+    <p>Each bubble represents the average daily data of one participant:</p>
+    <ul>
+      <li><b>Color:</b> blue for introverted (I), orange for extroverted (E).</li>
+      <li><b>Bubble size:</b> represents <b>Mood (1–5)</b>; larger bubbles indicate a happier mood.</li>
+    </ul>
+    <p>This visualization shows that as listening duration increases, perceived stress tends to decrease. The introverted group (blue) shows a steeper decline, suggesting stronger stress relief from music.</p>
+    <p><a href="sketch1.pdf" target="_blank">View sketch1.pdf</a></p>
+  </div>
+
+  <div class="sketch">
+  <h2>Sketch 2: How Do Different Music Genres Affect Focus and Mood?</h2>
+
+  <p><b>Hypothesis:</b> Different types of music influence people's emotional and cognitive states in different ways. 
+  Relaxing genres such as Lo-fi or C-Oldies tend to reduce stress and improve both mood and focus, 
+  while energetic genres such as Hardstyle or Rap may increase energy but lead to lower focus levels.</p>
+
+  <p><b>Axes (Radar Chart):</b><br>
+  - <b>Perceived Stress (0–5):</b> 0 = very low, 5 = very high<br>
+  - <b>Mood (0–5):</b> 0 = very negative, 5 = very positive<br>
+  - <b>Focus (0–5):</b> 0 = very low, 5 = very high</p>
+
+  <p><b>Units & Ranges:</b> All three variables are measured on a 0–5 scale. 
+  The radar chart center represents 0, and the outer edge represents 5.</p>
+
+  <p><b>Categories and Color Encoding:</b><br>
+  - Lo-fi: green<br>
+  - C-Oldies: pink<br>
+  - Rap: orange<br>
+  - Hardstyle: blue</p>
+
+  <p><b>How Values Are Calculated:</b> For each genre, all listening sessions labeled with that genre were collected, 
+  and the average values of <b>Stress</b>, <b>Mood</b>, and <b>Focus</b> were calculated. 
+  These three averages form the three points on the radar chart for that genre, 
+  and connecting them creates a closed triangle that represents the overall emotional and cognitive effect of that music type.</p>
+
+  <p><a href="sketch2.pdf" target="_blank">View sketch1.pdf</a></p>
+</div>
+
+<div class="sketch">
+  <h2>Sketch 3: Music Listening Hours and Happiness Across Personality Types</h2>
+
+  <p><b>Hypothesis:</b> Different personality types experience happiness from music in different ways. 
+  Introverted types (INFP, ISTJ) may listen to music for longer periods, 
+  while extroverted types (ENFP, ESTJ) experience shorter but more energetic listening sessions.</p>
+
+  <p><b>Visualization Concept:</b><br>
+  - <b>Grid cells:</b> Each small square represents one hour of music listening.<br>
+  - <b>Color:</b> Represents the average happiness level (Mood 0–5), using 5 fixed color levels (light / medium / dark).<br>
+  - <b>Four hearts:</b> Each heart represents one personality type — INFP, ISTJ, ENFP, and ESTJ.</p>
+
+  <p><b>How Values Are Calculated:</b> For each personality type, all listening records for <b>duration</b> and <b>mood</b> were grouped and averaged. 
+  The <b>average listening duration</b> determines the total number of squares (1 square = 1 hour), 
+  and the <b>average happiness score (Mood 0–5)</b> corresponds to one of five fixed color categories.</p>
+
+  <p><b>HTML Implementation:</b><br>
+  - Each small square is represented by a div element.<br>
+  - Each heart shape is constructed using a grid layout where the position of each square follows a predefined heart pattern (array or template).<br>
+  - The total number of filled squares corresponds to the <b>average listening duration</b> for that personality type.<br>
+  - The <b>color</b> of each filled square depends on the <b>average Mood value</b>: higher mood = darker color.<br>
+  - JavaScript dynamically creates and colors these div elements<br>
+  - CSS defines the grid structure, square size, spacing, and rounded corners for visual style.</p>
+
+  <p><a href="Sketch3.pdf" target="_blank">View sketch3.pdf</a></p>
+</div>
+
+<div class="sketch">
+  <h2>References & Inspiration Sources</h2>
+
+  <h3>Sketch 2: Radar Chart (Spider Chart)</h3>
+  <p><b>Inspiration Source:</b> 
+  <a href="https://d3-graph-gallery.com/spider.html" target="_blank">
+  https://d3-graph-gallery.com/spider.html</a></p>
+
+  <p><b>Reason for Choosing:</b> 
+  I was inspired by the radar (spider) chart examples on D3 Graph Gallery.  
+  This type of visualization clearly presents multiple variables on a single circular grid, 
+  which fits my goal of comparing different music genres across three dimensions which are Stress, Mood, and Focus.  
+  The balanced structure allows me to visualize both contrasts and overlaps among genres in a visually clear and elegant way.</p>
+  <hr>
+
+  <h3>Sketch 3: Pixel Heart Visualization</h3>
+  <p><b>Inspiration Source:</b> 
+  <a href="https://public.tableau.com/app/profile/ellen4268/viz/heart_17176865031980/2" target="_blank">
+  https://public.tableau.com/app/profile/ellen4268/viz/heart_17176865031980/2</a></p>
+
+  <p><b>Reason for Choosing:</b>  
+  I was inspired by Ellen Blackburn’s Tableau visualization that uses a pixelated heart composed of small squares.  
+  This grid-based structure visually quantifies data — each cell representing a measurable unit
+  which perfectly aligns with my idea of using small squares to represent listening hours.  
+  Meanwhile, the heart symbol naturally connects to the emotional theme of music and happiness.  
+  Since my project explores the relationship between music and mood，which is a topic filled with emotional and subjective meaning,
+  the heart shape becomes the most fitting and symbolic way to visualize this connection.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Vet | CarePaw</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Load fonts (Sigmar + Nunito) -->
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet"> 
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+  <!-- Header: 
+   left side shows clickable logo (back to homepage), 
+   right side same as homepage -->
+  <header class="header">
+      <div class="header-left">
+          <a href="index.html" class="logo-link">
+              <img src="images/Logo.png" alt="CarePaw Logo" class="logo-img" />
+          </a>
+      </div>
+      
+      <div class="header-right">
+            
+          <a href="login.html" class="login-btn">log in</a>
+      </div>
+  </header>
+
+
+
+
+  <!-- Main content of the page -->
+  <main class="vets-list-page"> 
+    
+    <h1>Let's find your doctor</h1>
+
+
+    <!-- Quick filters -->
+    <div class="filters">
+        <button class="filter-btn-Dog">Dog</button> 
+        <button class="filter-btn-Allergies">Allergies</button>
+        
+        <!-- Toggle button for showing/hiding all filters -->
+        <button class="filter-btn" id="filterToggleBtn" onclick="toggleFilterList()">All Filter ⬇️</button>
+    </div>
+    <!-- Full filter list (default——hidden❗️)  -->
+    <!-- toggleFilterList() controls show/hide -->
+    <div id="fullFilterList" class="full-filter-list" style="display: none;">
+        <!-- Expanded section — Concerns category filters -->
+        <div class="filter-section">
+            <h3>Concerns</h3>
+            <div class="filter-options">
+                <button class="modal-filter-btn">Allergies</button>
+                <button class="modal-filter-btn">Skin</button>
+                <button class="modal-filter-btn">Ear</button>
+                <button class="modal-filter-btn">Urinary</button>
+                <button class="modal-filter-btn">Toxic Ingestion</button>
+                <button class="modal-filter-btn">Dental</button>
+                <button class="modal-filter-btn">Respiratory</button>
+                <button class="modal-filter-btn">Cancer</button>
+                <button class="modal-filter-btn">Heat & circulation</button>
+                <button class="modal-filter-btn">Seizure & Brain</button>
+                <button class="modal-filter-btn">End of Life</button>
+                <button class="modal-filter-btn">Wellness</button>
+                <button class="modal-filter-btn">Infection</button>
+                <button class="modal-filter-btn">Obesity</button>
+                <button class="modal-filter-btn">Nurtition</button>
+                <button class="modal-filter-btn">Gland & Hormones</button>
+            </div>
+        </div>
+        <!-- Expanded section — Species category filters -->
+        <div class="filter-section">
+            <h3>Species</h3>
+            <div class="filter-options">
+                <button class="modal-filter-btn">Dog</button>
+                <button class="modal-filter-btn">Cat</button>
+                <button class="modal-filter-btn">Bird</button>
+                <button class="modal-filter-btn">Farm Animal</button>
+                <button class="modal-filter-btn">Small Mammal</button>
+                <button class="modal-filter-btn">Reptile</button>
+                <button class="modal-filter-btn">Other</button>
+            </div>
+        </div>
+         <!-- Expanded section — Action buttons: clear & apply -->
+        <div class="filter-actions">
+            <button class="modal-clear-btn">Clear</button>
+            <button class="modal-apply-btn">Apply Filter</button>
+        </div>
+    </div>
+
+
+
+   
+    <!-- VET GRID  -->
+    <!-- All vet cards-->
+    <div class="vet-grid">
+
+      <!-- ⭐ Doctor 1: Dr. Eric Zhang -->
+       <div class="vet-card">
+          <!-- Upper section -->
+          <div class="vet-header">
+            <img src="images/Dr-Eric-Zhang.jpeg" class="vet-avatar" /> 
+            <div class="vet-info">
+                <h3 class="vet-name-list">Dr. Eric Zhang</h3>
+                <p class="vet-title-list">Veterinarian, DVM</p>
+                <p class="vet-rating">⭐ 4.9 | 25 reviews</p>
+            </div>
+            <span class="next-icon">&gt;</span>
+        </div>
+
+        <div class="vet-features">
+            <p class="feature-item">✅ Prescription available</p>
+            <p class="feature-item">🌿 Mandarin</p>
+        </div>
+        <!-- Lower section — two visible timeslots -->
+        <div class="vet-timeslot-section">
+            <div class="vet-time-slots">
+                <button class="slot-today">Today at 6:30 p.m.</button>
+                <button class="slot-tomorrow">Today at 7:00 p.m.</button>
+            </div>
+            <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+        </div>
+        <!-- Lower section - More timeslots (hidden until expanded) -->
+        <div class="additional-slots" style="display: none;">
+            <button class="full-slot-btn">08:00 - 08:30</button>
+            <button class="full-slot-btn">10:00 - 10:30</button>
+            <button class="full-slot-btn">13:30 - 14:00</button>
+            <button class="full-slot-btn">15:00 - 15:30</button>
+            <button class="full-slot-btn">17:30 - 18:00</button>
+        </div>
+    </div>
+
+
+    <!-- ⭐ Doctor 2: Dr. Jane Smith -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+            <img src="images/Jane Smith.png" class="vet-avatar" /> 
+            <div class="vet-info">
+                <h3 class="vet-name-list">Dr. Jane Smith</h3>
+                <p class="vet-title-list">Feline Specialist</p>
+                <p class="vet-rating">⭐ 5.0 | 50 reviews</p>
+            </div>
+            <span class="next-icon">&gt;</span>
+        </div>
+
+        <div class="vet-features">
+            <p class="feature-item">✅ Specialized in Cats</p>
+            <p class="feature-item">🌿 English</p>
+        </div>
+
+        <div class="vet-timeslot-section">
+            <div class="vet-time-slots">
+                <button class="slot-tomorrow">Today at 9:00 a.m.</button>
+                <button class="slot-today">Today at 9:30 a.m.</button>
+            </div>
+            <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+        </div>
+
+        <div class="additional-slots" style="display: none;">
+            <button class="full-slot-btn">08:00 - 08:30</button>
+            <button class="full-slot-btn">10:00 - 10:30</button>
+            <button class="full-slot-btn">13:30 - 14:00</button>
+            <button class="full-slot-btn">15:00 - 15:30</button>
+            <button class="full-slot-btn">17:30 - 18:00</button>
+        </div>
+
+    </div>
+
+
+
+      <!-- ⭐ Doctor 3: Dr. Claire Laurin -->
+<div class="vet-card">
+
+          <div class="vet-header">
+            <img src="images/Dr. Claire Laurin.png" class="vet-avatar" /> 
+            <div class="vet-info">
+                <h3 class="vet-name-list">Dr. Claire Laurin</h3>
+                <p class="vet-title-list">Emergency Care</p>
+                <p class="vet-rating">⭐ 4.5 | 12 reviews</p>
+            </div>
+            <span class="next-icon">&gt;</span>
+        </div>
+
+        <div class="vet-features">
+            <p class="feature-item">✅ Available Now</p>
+            <p class="feature-item">🌿 Français</p>
+        </div>
+
+        <div class="vet-timeslot-section">
+            <div class="vet-time-slots">
+                <button class="slot-today">Now</button>
+                <button class="slot-tomorrow">In 30 mins</button>
+            </div>
+            <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+        </div>
+
+        <div class="additional-slots" style="display: none;">
+            <button class="full-slot-btn">08:00 - 08:30</button>
+            <button class="full-slot-btn">10:00 - 10:30</button>
+            <button class="full-slot-btn">13:30 - 14:00</button>
+            <button class="full-slot-btn">15:00 - 15:30</button>
+            <button class="full-slot-btn">17:30 - 18:00</button>
+        </div>
+
+    </div>
+
+
+      <!-- ⭐ Doctor 4: Dr. Mia Lee -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Dr-Mia-Lee.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Mia Lee</h3>
+                  <p class="vet-title-list">Exotic Pets</p>
+                  <p class="vet-rating">⭐ 4.7 | 8 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Prescription available</p>
+              <p class="feature-item">🌿 Korean</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-tomorrow">Tomorrow 8:00 a.m.</button>
+                  <button class="slot-tomorrow">Tomorrow 9:00 a.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+
+      <!-- ⭐ Doctor 5: Dr. Chris Brown -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Chris-Brown.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Chris Brown</h3>
+                  <p class="vet-title-list">Dog Training</p>
+                  <p class="vet-rating">⭐ 4.8 | 33 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Behavioral Specialist</p>
+              <p class="feature-item">🌿 English</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-today">Today at 5:00 p.m.</button>
+                  <button class="slot-tomorrow">Today at 8:30 p.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+
+      <!-- ⭐ Doctor 6: Dr. Ava Smith -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Ava Smith.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Ava Smith</h3>
+                  <p class="vet-title-list">Dental Health</p>
+                  <p class="vet-rating">⭐ 4.9 | 62 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Teeth Cleaning Consultation</p>
+              <p class="feature-item">🌿 English</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-tomorrow">Tomorrow 11:00 a.m.</button>
+                  <button class="slot-tomorrow">Tomorrow 1:00 p.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+
+      <!-- ⭐ Doctor 7: Dr. Ben Patt -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Dr. Ben Patt.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Ben Patt</h3>
+                  <p class="vet-title-list">Nutrition Expert</p>
+                  <p class="vet-rating">⭐ 4.6 | 18 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Diet Plan Available</p>
+              <p class="feature-item">🌿 Français</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-today">Today at 4:00 p.m.</button>
+                  <button class="slot-tomorrow">Today at 5:30 p.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+
+      <!-- ⭐ Doctor 8: Dr. Emily Fox -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Emily Fox.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Emily Fox</h3>
+                  <p class="vet-title-list">Dermatologist</p>
+                  <p class="vet-rating">⭐ 4.8 | 45 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Skin/Coat Issues</p>
+              <p class="feature-item">🌿 English</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-today">Today at 7:00 p.m.</button>
+                  <button class="slot-tomorrow">Today at 7:30 p.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+
+      <!-- ⭐ Doctor 9: Dr. Jason Kim -->
+      <div class="vet-card">
+
+          <div class="vet-header">
+              <img src="images/Jason Kim.png" class="vet-avatar" /> 
+              <div class="vet-info">
+                  <h3 class="vet-name-list">Dr. Jason Kim</h3>
+                  <p class="vet-title-list">General Practitioner</p>
+                  <p class="vet-rating">⭐ 4.7 | 29 reviews</p>
+              </div>
+              <span class="next-icon">&gt;</span>
+          </div>
+
+          <div class="vet-features">
+              <p class="feature-item">✅ Prescription available</p>
+              <p class="feature-item">🌿 Korean & Japanese</p>
+          </div>
+
+          <div class="vet-timeslot-section">
+              <div class="vet-time-slots">
+                  <button class="slot-tomorrow">Today at 6:00 p.m.</button>
+                  <button class="slot-today">Tomorrow 10:00 a.m.</button>
+              </div>
+              <a href="#" class="more-slots" onclick="toggleTimeslots(this)">see more timeslots</a>
+          </div>
+
+          <div class="additional-slots" style="display: none;">
+              <button class="full-slot-btn">08:00 - 08:30</button>
+              <button class="full-slot-btn">10:00 - 10:30</button>
+              <button class="full-slot-btn">13:30 - 14:00</button>
+              <button class="full-slot-btn">15:00 - 15:30</button>
+              <button class="full-slot-btn">17:30 - 18:00</button>
+          </div>
+
+      </div>
+
+
+    </div> <!-- END of vet-grid -->
+
+
+  </main>
+
+
+
+<footer class="footer">
+    <div class="footer-social">
+        <h2 class="footer-title">Follow Us</h2>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+  </footer>
+
+
+
+
+<!--        JS        -->
+<!--  Filter & timeslot toggle logic + card click navigation   -->
+<script>
+   // Filter toggle:
+    function toggleFilterList() {
+        // 1. Get the filter list container and the trigger button
+        const list = document.getElementById('fullFilterList'); // full filter list
+        const button = document.getElementById('filterToggleBtn'); // All Filter btn
+        
+        // 2. Check current visibility
+        if (list.style.display == 'none') {
+            // If list is currently hidden
+
+            list.style.display = 'block';// Show the filter list
+            button.textContent = 'All Filter ⬆️'; // // Switch arrow to "up" (⬆️)
+        } else {
+            // list is currently visible
+            list.style.display = 'none'; // Hide the filter list
+            button.textContent = 'All Filter ⬇️'; // Switch arrow to "down"
+        }
+    }
+
+    
+
+    // Time Slots：
+    function toggleTimeslots(linkElement) {
+        event.preventDefault(); // // Prevent page ~~~~~~
+        
+        // 1. find container (vet-timeslot-section)
+        const timeslotSection = linkElement.parentNode; 
+        
+        // 2. get [additional-slots],which hide more slots
+        const additionalSlots = timeslotSection.nextElementSibling;
+        
+        // 3. Check current visibility
+        if (additionalSlots.style.display == 'none' || additionalSlots.style.display == '') {
+            // 如果是隐藏状态，则显示列表
+            additionalSlots.style.display = 'flex'; //  // Show extra timeslots, and using flex layout
+            linkElement.textContent = 'Hide timeslots ▲'; //// Update link text + arrow
+        } else {
+            // 如果是显示状态，则隐藏列表
+            additionalSlots.style.display = 'none'; // Hide extra timeslots
+            linkElement.textContent = 'see more timeslots'; // show original text“see more timeslots”
+        }
+    }
+
+  
+
+
+// Click vet-card
+//  → go to detail page (除了“see more timeslots” link):
+//WHY❓❓❓：
+// 😭When building this page, I forgot to add navigation logic！
+//After completing many vet cards, layout issues appeared and were difficult to fix.
+//To avoid rewriting the HTML structure and save more time,
+// I decided to use JS for the navigation for all card
+// BUT skipping only the “see more timeslots” link.
+
+
+// Select all vet-card elements
+const cards = document.querySelectorAll(".vet-card");
+
+// Loop through each card
+for (let i = 0; i < cards.length; i++) {
+
+    cards[i].addEventListener("click", function (event) {
+
+        // If the user clicks the "see more timeslots" link, do NOT redirect
+        if (event.target.classList.contains("more-slots")) {
+            return; // 直接停止，不跳转
+        }
+
+       
+        // go to [vet detail page]
+        window.location.href = "vet-detail.html";
+    });
+}
+
+
+function toggleLangMenu() {
+    const menu = document.getElementById("langMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+
+</script>
+
+
+</body>
+</html>

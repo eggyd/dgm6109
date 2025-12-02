@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarePaw</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Import Sigmar font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <!-- Import media logo -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+  <!-- Left side header-online vet -->
+  <div class="header-left">
+    <a href="vets-list.html">
+  <button class="tag-btn">Online Vet</button>
+</a>
+  </div>
+  
+  <!-- right side header-login&language choose -->
+  <div class="header-right">
+    <div class="lang-dropdown">
+    <button class="lang-select" onclick="toggleLangMenu()">ENG ⌄</button>
+
+    <div id="langMenu" class="lang-menu">
+        <div class="lang-option">ENG</div>
+        <div class="lang-option">Français</div>
+    </div>
+   </div>
+    <a href="login.html" class="login-btn">log in</a>
+  </div>
+</header>
+
+
+
+
+  <!-- HERO -->
+  <!-- logo+slogan -->
+  <section class="hero">
+    <div class="hero-text">
+      <img src="images/Logo.png" class="hero-logo" />
+      <p>Meet your pet’s<br>need<br>So they live<br>happily</p>
+    </div>
+    
+  <!-- Vertical review banner + round shapes-->
+  <div class="hero-review">
+   <img src="images/Alex-holdingdog.jpg" class="review-vertical" />
+
+  <div class="review-shape"></div>
+  <div class="review-line1"></div>
+  <div class="review-line2"></div>
+
+  <!-- Horizontal review card -->
+  <div class="review-box">
+    <!-- Five-star rating -->
+   <div class="stars">⭐⭐⭐⭐⭐</div>
+    <!-- User avatar + name + review -->
+   <div class="review-user">
+      <img src="images/user.jpg" class="avatar">
+      <span class="username">Alex</span>
+   </div>
+    <p class="review-text">
+      So much better than Googling, guessing, and stressing! It makes compelling sense within current
+      circumstances. We appreciated Dr.Q flexibility in taking what was a very
+      last minute, evening appointment!!
+    </p>
+  </div>
+</div>
+  </section>
+
+
+
+
+  <!-- 24/7 SECTION (3 feature highlights) -->
+  <section class="twentyfour">
+    <!--section slogan -->
+    <h2>Stop stressing about<br>your pet’s health with <span>24/7</span> online vet care</h2>
+    
+    <!-- 3 feature card in a row -->
+    <div class="features-row">
+      <!-- find the right vet for your pet -->
+      <div class="feature-box">
+        <img src="images/find-right-vet.jpg" />
+        <h3>Find the right vet for your pet</h3>
+        <p>Browse vet profiles and read reviews from other pet parents.</p>
+      </div>
+      <!-- provide expert care 24/7 -->
+      <div class="feature-box">
+        <img src="images/24-7.png" />
+        <h3>Access expert care 24/7</h3>
+        <p>Instant messaging with a veterinary professional or book a video call - all from home.</p>
+      </div>
+      <!-- get a prescription online -->
+      <div class="feature-box">
+        <img src="images/prescription.jpg" />
+        <h3>Get a prescription online</h3>
+        <p>Order online or pick up from your local pharmacy.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Veterinarian introduction section -->
+  <section class="vets-section">
+  <!-- Left side: slogan + button + 2 badges -->
+  <div class="vets-left">
+    <h2>Our veterinarians are<br>verified and hand-picked</h2>
+    <p class="vets-desc">
+      Our vets are compassionate, highly experienced, and<br>
+      dedicated to giving your pet the care they deserve.
+    </p>
+    <a href="vets-list.html">
+  <button class="talk-btn">Talk to Vet</button>
+</a>
+    <div class="vet-badges">
+      <div class="badge"><span class="check">✔</span> Top-rated veterinarians</div>
+      <div class="badge"><span class="check">✔</span> Licensed and in good standing</div>
+    </div>
+  </div>
+
+  <!-- Right side: yellow background + vet photo + vet info card -->
+  <div class="vets-right">
+    <div class="vet-bg-box"></div>
+    <img src="images/Dr-Eric-Zhang.jpeg" class="vet-img">
+    <div class="vet-info-card">
+      <div class="vet-stars">⭐⭐⭐⭐⭐</div>
+      <h3 class="vet-name">Dr. Eric Zhang</h3>
+      <p class="vet-title"><span class="title-text">Veterinarian, DVM</span></p>
+      <p class="vet-text">
+        I'm here to offer expert advice and support<br>
+        every step of the way.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Appointment steps section -->
+  <section class="steps">
+    <!-- Left side example image -->
+    <div class="steps-left">
+      <img src="images/videochat.png" class="step-img" />
+    </div>
+
+    <!-- Right side steps + button -->
+    <div class="steps-right">
+      <h2>Get better pet care with a vet<br>in just 3 steps</h2>
+      <ol>
+        <li>Choose your vet & book an appointment</li>
+        <li>Get a personalized care plan</li>
+        <li>Get prescriptions online</li>
+      </ol>
+      <!-- <ol> is ordered list; <li> is list item. Better than <p> because it's cleaner, avoids mistakes, and looks nicer. -->
+      <a href="vets-list.html">
+  <button class="talk-btn">Talk to Vet</button>
+</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-social">
+        <h2 class="footer-title">Follow Us</h2>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+function toggleLangMenu() {
+    const menu = document.getElementById("langMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</html>

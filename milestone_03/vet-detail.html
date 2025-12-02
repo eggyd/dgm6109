@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Eric Zhang | CarePaw</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet"> 
+    <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+
+
+<body>
+  <!-- Header -->
+  <header class="header">
+      <div class="header-left">
+          <a href="index.html" class="logo-link">
+              <img src="images/Logo.png" alt="CarePaw Logo" class="logo-img" />
+          </a>
+      </div>
+      
+      <div class="header-right">
+         <a href="login.html" class="login-btn">log in</a>
+      </div>
+  </header>
+
+    <!-- Back button -->
+<a href="vets-list.html" class="back-btn">
+    ← Back
+</a>
+
+
+   <!-- Main content -->
+  <main class="vet-detail-page"> 
+    <!-- LEFT SIDE -->
+    <div class="vet-detail-left">
+      
+      <!-- Doctor info -->
+      <div class="detail-profile">
+        <!-- Avatar -->
+        <div class="detail-avatar-container">
+            <img src="images/Dr-Eric-Zhang.jpeg" alt="Dr. Eric Zhang" class="detail-avatar-img" />
+        </div>
+       <!-- Name + job title -->
+        <div class="detail-info">
+          <h2>Dr. Eric Zhang</h2>
+          <p class="detail-title">Veterinarian, DVM</p>
+          <!--career highlight-->
+          <div class="detail-features-badges">
+            <span class="badge-feature"><i class="fas fa-check-circle"></i> Prescription available</span>
+            <span class="badge-feature"><i class="fas fa-leaf"></i> Mandarin</span>
+          </div>
+        </div>
+      </div>
+      <!-- Doctor introduction -->
+      <p class="detail-description">
+        As an experienced small animal veterinarian, I understand the unique bond between pets and their owners. My goal is to support and strengthen this relationship through thoughtful and attentive veterinary care. Whether it's addressing routine wellness needs, guiding you through managing complex health issues, I'm here to offer expert advice and support every step of the way. 
+      </p>
+      <!-- License information -->
+      <div class="detail-section licenses-section">
+        <h3>Licenses</h3>
+        <p>British Columbia (BC, CA)</p>
+      </div>
+      <!-- Species good at-->
+      <div class="detail-section species-section">
+        <h3>Species treated</h3>
+        <div class="species-list">
+          <span class="species-tag">Dog</span>
+          <span class="species-tag">Cat</span>
+          <span class="species-tag">Small Mammal</span>
+        </div>
+      </div>
+
+
+
+    <!-- User reviews -->
+      <div class="detail-section reviews-section">
+        <h3 class="reviews-header">
+          <i class="fas fa-star review-star-icon"></i> 
+          4.9 | 25 Reviews
+        </h3>
+        
+        <div class="review-grid">
+          <!-- 1 -->
+          <div class="review-card">
+            <p class="review-text-detail">Amazing Doctor, lots of knowledge, very kind, and truly cares about your pets well-being!</p>
+            <div class="review-user-detail">
+                <!-- First letter of the name as the avatar -->
+              <div class="avatar-detail">T</div> 
+              <div>
+                <p class="username-detail">Tina Fadi</p>
+                <p class="review-date">November 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="review-card">
+            <p class="review-text-detail">Very professional and patient. The doctor explained everything clearly and helped me understand what was going on with my dog.</p>
+            <div class="review-user-detail">
+              <div class="avatar-detail">A</div>
+              <div>
+                <p class="username-detail">Alex M.</p>
+                <p class="review-date">October 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="review-card">
+            <p class="review-text-detail">Quick response and super friendly! I felt much more confident about my cat’s symptoms after the consultation.</p>
+            <div class="review-user-detail">
+              <div class="avatar-detail">S</div>
+              <div>
+                <p class="username-detail">Sophia L.</p>
+                <p class="review-date">September 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="review-card">
+            <p class="review-text-detail">Amazing service. The vet took time to answer all my questions and gave really helpful at-home care advice.</p>
+            <div class="review-user-detail">
+              <div class="avatar-detail">D</div>
+              <div>
+                <p class="username-detail">Daniel R.</p>
+                <p class="review-date">November 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="review-card">
+            <p class="review-text-detail">Very knowledgeable and kind. My rabbit is usually nervous, but the vet handled everything gently and professionally.</p>
+            <div class="review-user-detail">
+              <div class="avatar-detail">M</div>
+              <div>
+                <p class="username-detail">Mei Chen</p>
+                <p class="review-date">August 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="review-card">
+            <p class="review-text-detail">Clear explanations, calm attitude, and thoughtful suggestions. I really appreciate the support!</p>
+            <div class="review-user-detail">
+              <div class="avatar-detail">H</div>
+              <div>
+                <p class="username-detail">Hannah P.</p>
+                <p class="review-date">July 2025</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- Link to full review page -->
+        <a href="reviews.html" class="see-more-reviews">see more reviews</a>
+      </div>
+      
+    </div>
+    
+
+
+
+
+
+
+    <!-- RIGHT SIDE — booking card -->
+    <div class="vet-detail-right">
+      <div class="booking-card">
+        <h3>Next available time slots</h3>
+        <!-- Timeslot buttons -->
+        <div class="time-slots-buttons">
+            <!-- Active selection -->
+          <button class="slot-button active">Today at 4:00 PM</button> 
+          <button class="slot-button">Today at 4:30 PM</button>
+          <button class="slot-button">Today at 5:00 PM</button>
+          <button class="slot-button">Today at 5:30 PM</button>
+        </div>
+
+       <!-- Booking button (redirects to checkout/booking page) -->
+       <a href="booking.html">
+       <button class="booking-btn">BOOKING</button>
+       </a>
+      </div>
+    </div>
+    
+  </main>
+  
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-social">
+        <h2 class="footer-title">Follow Us</h2>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* ================================
+   Global Font + Color System
+   ================================ */
+
+/* 引入圆润 Google Fonts —— Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* Overall page layout + background + default font */
+body {
+    background-color: #f7f3f4;
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* width + spacing for title/hypothesis area */
+.page-container {
+    width: 850px;
+    margin-top: 30px;
+    }
+
+/* Hypothesis card*/
+.hypothesis-card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    margin-bottom: 40px;
+     }
+
+ /* Paragraph card （similar style with hypothesis card) */
+.paragraph-card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    margin-bottom: 40px;
+     }
+
+
+
+
+/* chart area */
+/* Global font settings for body/svg/text */
+body, svg, text {
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #6f5c5d;    /* 柔和灰粉（正文） */
+}
+
+.viz-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    margin-bottom: 60px;
+    }
+
+/* chart container */
+.viz-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;              
+    max-width: 1300px;       
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+     }
+
+/* Center the actual SVG element */
+#canvas svg {
+    display: block;
+    margin: 0 auto;          /* center SVG */
+}
+      
+
+
+/* Title （Music Listening Hours & Happiness Across Personality Types）*/
+h1 {
+    font-weight: 700;
+    color: #b19497;   
+    letter-spacing: 0.5px;
+}
+
+/* Subtitle 
+h1 span {
+    color: #ae9b9d;
+    font-weight: 600;
+} */
+
+/* Personality Label above hearts (ENFP ESTJ...）*/
+.personalityLabel {
+    font-size: 22px;
+    font-weight: 700;
+    fill: #b19497; 
+}
+
+/* Hours / Mood text */
+.infoText {
+    font-size: 15px;
+    fill: #6f5c5d;  
+}
+
+/* Legend title */
+.legendTitle {
+    font-size: 18px;
+    font-weight: 700;
+    fill: #b19497;
+}
+
+/* Legend small text */
+.legendText {
+    font-size: 14px;
+    fill: #6f5c5d;
+}
+
+.legendNote {
+    font-size: 14px;
+    fill:#5454549b
+}

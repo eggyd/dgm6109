@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | CarePaw</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="profile-page">
+
+<!-- HEADER -->
+<header class="header">
+    <a href="index.html" class="logo-link">
+        <img src="images/Logo.png" class="logo-img">
+    </a>
+    <a href="login.html" class="login-btn">log in</a>
+</header>
+
+<main class="vet-detail-page">
+<!-- (same layout as booking page) -->
+
+    <!-- LEFT -->
+    <div class="vet-detail-left">    
+        <!-- Pet Info -->
+        <div class="profile-card">
+            <!-- section tittle -->
+         <h2 class="profile-section-title">Tell us about your pet</h2>
+            <!-- pet name -->
+            <div class="profile-row">
+                <p class="profile-label">Pet’s name:</p>
+                <label><input type="text" class="profile-input"></label>
+            </div>
+            <!-- pet breed -->
+            <div class="profile-row">
+                <p class="profile-label">Breed:</p>
+                <label><input type="text" class="profile-input"></label>
+            </div>
+            <!-- pet sex -->
+            <div class="profile-row">
+                <p class="profile-label">Sex :</p>
+                <label><input type="radio" name="sex"> Female</label>
+                <label style="margin-left:15px;"><input type="radio" name="sex"> Male</label>
+                <!-- radio 单选按钮 -->
+            </div>
+            <!-- pet bday-->
+            <div class="profile-row">
+                <p class="profile-label">Birthday:</p>
+                <label><input type="text" class="profile-input" placeholder="yyyy/mm/dd"></label>
+            </div>
+
+        </div>
+
+        <!-- Payment Details (copy paste from booking.html)-->
+        <div class="booking-card">
+            <h3 class="booking-subtitle">Payment method</h3>
+
+            <input type="text" placeholder="Card number" class="booking-input">
+
+            <input type="text" placeholder="Expiration date (MM / YY)" class="booking-input">
+
+            <div class="payment-row">
+                <input type="text" placeholder="Security code" class="booking-input-small">
+                <input type="text" placeholder="Name on card" class="booking-input-large">
+            </div>
+        </div>
+
+        <a href="index.html">
+            <button class="booking-btn" style="margin-top:40px; width:180px;">Log out</button>
+        </a>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="vet-detail-right">
+
+        <div class="profile-card" style="padding:30px; text-align:center;">
+
+            <div class="profile-avatar"></div>
+
+            <p style="margin-top:10px; font-size:14px; color:#888;">Upload photo</p>
+
+            <div class="profile-id-box">
+                <span>ID 1233321</span>
+                <span style="text-decoration:underline; color:#888;">Edit</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-social">
+        <h2 class="footer-title">Follow Us</h2>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOOKING checkout | CarePaw</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body class="booking-page">
+<!-- HEADER -->
+<header class="header">
+    <a href="index.html" class="logo-link">
+        <img src="images/Logo.png" class="logo-img">
+    </a>
+
+        <a href="login.html" class="login-btn">log in</a>
+    </div>
+</header>
+<!-- Back Button -->
+<a href="vet-detail.html" class="back-btn"> ← Back </a>
+
+
+
+
+<main class="vet-detail-page">
+
+    <!-- LEFT SIDE -->
+    <div class="vet-detail-left">
+        <h2 class="booking-title">Confirm and book</h2>
+
+        <!-- Appointment summary (date + pet info) -->
+        <div class="booking-card booking-section">
+
+            <h3 class="booking-subtitle">Your appointment</h3>
+            <!-- Date -->
+            <div class="booking-row">
+                <p class="booking-label">Date</p>
+                <p class="booking-date">Nov 21, 2025 at 9:30PM</p>
+            </div>
+            <!-- Pet name -->
+            <div class="booking-row">
+                <p class="booking-label">Pet's name:</p>
+                <input type="text" class="booking-input">
+            </div>
+            <!-- Pet breed (required) -->
+            <div class="booking-row">
+                <p class="booking-label">Breed: <span class="required-text">Required</span></p>
+                <input type="text" class="booking-input">
+            </div>
+            <!-- Pet sex (required) -->
+            <div class="booking-row">
+                <p class="booking-label">Sex: <span class="required-text">Required</span></p>
+                <label><input type="radio" name="sex"> Female</label>
+                <label><input type="radio" name="sex"> Male</label>
+            </div>
+            <!-- Reason for visit (large input, required) -->
+            <div class="booking-row">
+                <p class="booking-label">Reason for visit: <span class="required-text">Required</span></p>
+                <input type="text" class="booking-input-reason">
+            </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="booking-card">
+            <h3 class="booking-subtitle">Payment method</h3>
+
+            <input type="text" placeholder="Card number" class="booking-input">
+
+            <input type="text" placeholder="Expiration date (MM / YY)" class="booking-input">
+
+            <div class="payment-row">
+                <input type="text" placeholder="Security code" class="booking-input-small">
+                <input type="text" placeholder="Name on card" class="booking-input-large">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- RIGHT SIDE: doctor info + price summary -->
+    <div class="vet-detail-right">
+        <div class="booking-card sticky-booking">
+            <!-- Doctor info -->
+            <div class="doctor-header">
+                <img src="images/Dr-Eric-Zhang.jpeg" class="detail-avatar-img">
+                <div>
+                    <h3 class="doctor-name">Dr. Eric Zhang</h3>
+                    <p class="doctor-title">Veterinarian, DVM</p>
+
+                    <div class="doctor-features">
+                        <span class="badge-feature"><i class="fas fa-check-circle"></i> Prescription available</span>
+                        <span class="badge-feature"><i class="fas fa-leaf"></i> Mandarin</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Price details -->
+            <h3 class="booking-subtitle">Price details</h3>
+
+            <div class="price-row">
+                <p>Appointment</p><p>$50.00</p>
+            </div>
+
+            <div class="price-row">
+                <p>Tax</p><p>$3.25</p>
+            </div>
+
+            <hr class="price-divider">
+
+            <div class="price-row total-row">
+                <strong>Total (CAD)</strong><strong>$53.25</strong>
+            </div>
+            
+            <!-- Clicking the button goes to the video-call page -->
+            <a href="video-call.html">
+                <button class="booking-btn booking-confirm-btn">Confirm and book</button>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-social">
+        <h2 class="footer-title">Follow Us</h2>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,2381 @@
+/* Base styles */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body { font-family: 'Poppins', sans-serif; background: #FFFCF2; color: #333; }
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Header */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.header { width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+.tag-btn { background: #F7D774; border: none; padding: 20px 30px; border-radius: 8px; font-size: 20px; font-family: 'Poppins', sans-serif; font-weight: 700; }
+.tag-btn:hover {
+    background-color: #f4c647; 
+    transform: scale(1.06);    
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); 
+    cursor: pointer;           /* mouse to finger(?! bad eng)  */
+}
+
+/* Language Dropdown container */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* The visible button */
+.lang-select {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+/* The dropdown box */
+.lang-menu {
+    display: none;  /* default--hidden */
+    position: absolute;
+    top: 40px;  /* appear under button */
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    padding: 8px 0;
+    width: 120px;
+    z-index: 50;
+}
+/* Each option */
+.lang-option {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Hover 效果 */
+.lang-option:hover {
+    background: #f4f4f4;
+}
+.login-btn {
+    background: #F7D774;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;  /* Remove link underline */
+    color: black;          
+    display: inline-block;
+    cursor: pointer;       
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: #F7D774; /* button color */
+    padding:15px 20px; 
+    border-radius: 8px; 
+    text-decoration: none;
+}
+.logo-img {
+    height: 40px; 
+    width: auto;
+    display: block;
+    cursor: pointer;
+}
+.logo-img:hover {
+    transform: scale(1.06); 
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.15)); 
+    cursor: pointer; 
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Hero */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.hero { display: flex; justify-content: space-between; align-items: center; padding: 60px 40px; }
+.hero-text {
+  transform: translateY(-80px);
+}
+.hero-text p {
+  font-family: 'Sigmar', cursive; 
+  /* 
+  "cursive" is a generic font family. 
+  If the browser cant load the font ('Sigmar'), 
+  it will fall back to any available cursive/handwritten-style font 
+  to preserve the overall design style.
+*/
+  font-size: 50px;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-left: 0px; 
+}
+/* logo */
+.hero-logo {
+  width: 700px;  
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: -50px; 
+}
+
+
+/* Review Section */
+.hero-review {
+  position: relative;
+  width: 600px;
+  height: 420px;
+}
+.review-shape {
+  position: absolute;
+  left: -80px;    
+  top: 40px;      
+  width: 300px;   
+  height: 300px;  
+  border: 4px solid black;
+  border-radius: 50%; /*make it to round*/
+  border-color: black transparent black black; /* Only left,top, bottom sides are visible,creating a half-circle effect. */
+  transform: rotate(10deg); 
+
+  z-index: -1; /* very bottom layer */
+}
+.review-line1 {
+  position: absolute;
+  left: 220px;  
+  top: 40px;   
+  width: 500px;  
+  height: 4px;
+  background: black;
+  z-index: -1;
+}
+.review-line2 {
+  position: absolute;
+  left: 180px;  
+  top: 350px;   
+  width: 450px;  
+  height: 4px;
+  background: black;
+  z-index: -1;
+}
+
+/* Vertical rec image on the right */
+.review-vertical {
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  object-fit: cover; /* 保持图片比例并裁剪 */
+  border-radius: 28px;
+}
+
+/* Horizontal review card */
+.review-box {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  left: auto;
+
+  /* Card size */
+  width: 380px;
+  padding: 18px 22px;
+  border-radius: 30px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* 5 star rating */
+.stars {
+  color: #F7C800; /*以防万一变成黑色的*/
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Avatar + name*/
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+/* Circular avatar */
+.avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* Username */
+.username {
+  font-size: 22px;
+  font-weight: 700;
+}
+/* User review text */
+.review-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* 24/7 Section */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.twentyfour { text-align: center; padding: 80px 40px; }
+.twentyfour h2 { font-size: 32px; line-height: 1.4; margin-top: -120px }
+.twentyfour span { color: #F7C800; font-weight: 700; }
+.features-row { display: flex; justify-content: space-between; margin-top: 50px; }
+.feature-box { width: 30%; background: white; padding: 20px; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.feature-box img {
+  width: 100%;
+  height: 220px;        /*  all images the same height */
+  object-fit: cover;    /* crop images overflow */
+  border-radius: 14px;
+}
+.feature-box h3 { margin-top: 15px; font-size: 20px; }
+.feature-box p { margin-top: 10px; font-size: 14px; }
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Vets（Dr.Eric） */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.vets-section {
+  background: #F7D774;
+  padding: 80px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left area (title + description + button + 2 feature badges) */
+.vets-left {
+  width: 50%;
+}
+.vets-section h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.vets-desc {
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: #333;
+}
+/* Talk to Vet button */
+.talk-btn {
+  margin-top: 20px;
+  background: white;
+  color: #F7C800; 
+  border: none;
+  padding: 14px 36px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 40px;
+  cursor: pointer;  
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.talk-btn:hover {
+    background-color: #ffffff; 
+    transform: scale(1.06);    
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); 
+    cursor: pointer;           /* mouse to finger(?! bad eng)  */
+}
+
+/* Two white rounded feature badges  */
+.vet-badges {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column; /* Switch from row to column */
+  gap: 20px;
+}
+.badge {
+  background: white;
+  padding: 10px 16px;
+  width: fit-content;
+  border-radius: 40px;
+  display: inline-flex; /*让一个容器 内部 的内容可以灵活排版 (flex)，同时让这个容器 自身 能够像文字一样 并排 放在同一行 (inline)。*/
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.check {
+  font-size: 22px;
+  color:rgb(5, 174, 36)
+}
+
+/* Right area (image + info card + yellow background shape) */
+.vets-right {
+  width: 45%;
+  position: relative;
+}
+.vet-bg-box {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 480px;
+  height: 450px;
+  background: #F9E38A;
+  border-radius: 30px;
+}
+.vet-img {
+  position: relative;
+  width: 300px;
+  border-radius: 30px;
+  z-index: 2;
+  transform: translate(300px, -70px);
+}
+/* Information card overlay on top of the photo */
+.vet-info-card {
+  position: absolute;
+  left: 40px;
+  top: 260px;
+
+  width: 360px;
+  background: white;
+  padding: 24px 26px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+.vet-stars {
+  color: #F7C800;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.vet-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.vet-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+}
+.vet-title .title-text {
+    color: #888; 
+    font-weight: 380; 
+}
+
+.vet-text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Steps */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.steps { display: flex; justify-content: space-between; padding: 80px 40px; }
+.steps-left { width: 50%; display: flex; flex-direction: column; gap: 20px; }
+.step-img { width: 100%; border-radius: 16px; }
+.steps-right { width: 40%; }
+.steps-right h2 { 
+  font-size: 32px; 
+  margin-bottom: 20px; 
+  margin-left: -12px;
+}
+.steps-right ol { 
+  padding-left: 30px;    /* Prevent indentation (though it may not take effect....） */   
+  font-size: 18px; 
+  line-height: 2;
+  margin-bottom: 30px; 
+}
+/* Footer */
+.footer {
+    background: #F7D774;
+    padding: 60px 80px;   
+    margin-top: 40px;
+}
+
+/* Follow Us tittle*/
+.footer-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Footer Social Media Icons */
+.footer-social {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Horizontal icon row with spacing  */
+.social-icons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Single icon style */
+.social-icon i {
+    font-size: 42px;
+    color: #222;
+    transition: 0.2s ease;
+}
+
+/* Hover  */
+.social-icon i:hover {
+    color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media screen and (max-width: 768px) { 
+  /* Base */
+    body { margin: 0; }
+    .header, .hero, .twentyfour, .vets-section, .steps, .footer {
+        padding: 20px 15px;
+        flex-direction: column; 
+        align-items: center; /*  Center elements */
+        width: 100%; /* Ensure full width for proper alignment */
+    }
+    
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Header - maintain row layout */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .header {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* Header inner elements unchanged */
+    .header-left { order: 1; width: auto; margin-bottom: 0; }
+    .header-right { order: 2; display: flex; align-items: center; gap: 10px; }
+    .tag-btn { padding: 10px 15px; font-size: 16px; margin-right: 0; }
+    .lang-select { font-size: 14px; }
+    .login-btn { padding: 8px 12px; font-size: 14px; border-radius: 8px; }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Hero Section */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .hero { padding-top: 30px; }
+    .hero-text {
+        transform: translateY(0); 
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center; 
+    }
+    /* logo - centered */
+    .hero-logo {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 10px auto; 
+        display: block;
+    }
+
+    /* 保证居中 */
+    .hero-text p {
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Review Section */
+    .hero-review {
+        width: 90%; 
+        height: auto; 
+        max-width: 320px;
+        margin-top: 10px;
+        position: static; 
+        box-shadow: none; 
+        background: none; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .review-vertical {
+        position: static;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+        margin-bottom: -85px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    /* Horizontal review card */
+    .review-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px; 
+        padding-top: 30px;
+        border-radius: 12px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Stars, Review user, Avatar, etc. unchanged */
+    .stars { color: #F7C800; font-size: 14px; margin-bottom: 5px; }
+    .review-user { position: absolute; top: -20px; left: 15px; gap: 8px; margin-bottom: 0; display: flex; align-items: center; background: white; padding-right: 10px; border-radius: 50px; z-index: 10; }
+    .avatar { width: 40px; height: 40px; box-shadow: 0 0 0 3px #FFFCF2, 0 2px 5px rgba(0,0,0,0.1); }
+    .username { font-size: 18px; font-weight: 700; transform: translateY(0); }
+    .review-text { font-size: 11px; line-height: 1.4; color: #333; margin-top: 10px; }
+    .review-shape, .review-line1, .review-line2 { display: none; }
+    
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* 24/7 Section (3 features) */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .twentyfour h2 { font-size: 24px; margin-top: 0; line-height: 1.3;}
+    .features-row { flex-direction: column; gap: 20px; }
+    .feature-box { width: 100%; padding: 10px; }
+    .feature-box h3 { margin-top: 10px; font-size: 20px; line-height: 1.2; }
+    .feature-box p { margin-top: 0px; font-size: 15px; line-height: 1.2; }
+    .feature-box img { height: 150px; }
+
+
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Vets Section (about vet) */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .vets-section { padding: 40px 15px; gap: 30px; }
+    .vets-left, .vets-right { width: 100%; }
+    .vets-left {
+        text-align: center; /* 文本居中 */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .vets-section h2 { font-size: 24px; }
+    .vets-desc { font-size: 16px; }
+    /* badges 居中 */
+    .vet-badges {
+        margin-top: 40px;
+        display: flex;
+        font-size: 5px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    /* Image and info card adjustments */
+    .vets-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 520px;
+    }
+    .vet-bg-box { position: static; width: 100%; height: 220px; margin-top: 20px; }
+    .vet-img { position: absolute; width: 200px; transform: translate(0, 0); top: -20px; left: 50%; transform: translateX(-50%); z-index: 2; }
+    .vet-info-card { position: absolute; top: 180px; left: 15px; right: 15px; width: auto; max-width: 90%; margin: 0 auto; padding: 15px; text-align: center;z-index: 3;}
+    
+    
+    
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Steps Section  */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .steps { padding: 40px 15px; gap: 30px; flex-direction: column;  }
+    .steps-left, .steps-right { width: 100%; }
+    .steps-left { order: 2; }
+    
+    .steps-right { 
+        order: 1; 
+        text-align: left; /* center tittle and button */
+    }
+
+
+    .steps-right h2 { font-size: 24px;margin-left: 1px; }
+    
+    .steps-right ol { 
+        font-size: 16px; 
+        text-align: left; /* keep all text on left */
+        display: inline-block; 
+        margin-left:16px;
+        line-height: 15px;
+    }
+    .steps-right .talk-btn { margin: 20px auto 10px auto; }
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Footer */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+   .footer {
+        padding: 40px 30px;
+        text-align: center; /* center is better looking */
+    }
+
+    /* Follow Us tittle smaller*/
+    .footer-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* all icons centered*/
+    .social-icons {
+        justify-content: center;
+        gap: 25px;        /* gap smaller */
+        flex-wrap: wrap;  /* change to next line */
+    }
+
+    /* single icon size */
+    .social-icon i {
+        font-size: 28px;   /* smaller */
+    }
+}
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  VET LIST PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* VET main */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.vets-list-page {
+    padding: 20px 40px 60px 40px; 
+    max-width: 1300px; 
+    margin: 0 auto;    
+}
+
+.vets-list-page h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* quick filter */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+/* button--dog*/
+.filter-btn-Dog {
+    background: #E6EDF8;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* button--allergies */
+.filter-btn-Allergies {
+    background: #E6EDF8;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.filter-btn{
+    background: #fdfeffb3;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* expanded list--main*/
+.full-filter-list {
+    background: white;
+    border: 1px solid #eee;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.filter-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+/* expanded list--pet breed*/
+.filter-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/* expanded list--tittle*/
+.filter-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0; 
+    margin-bottom: 15px;
+    color: #555;
+    padding-left: 5px;
+}
+/* expanded list--choose options*/
+.filter-options {
+    display: flex;
+    flex-wrap: wrap; /*一行放不下就放下一行*/
+    gap: 10px;
+}
+/* expanded list--button */
+.modal-filter-btn {
+    background: #FFFCF2;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+/* expanded list--button hover*/
+.modal-filter-btn:hover {
+    border-color: #F7D774;
+}
+/* expanded list--button--clear button */
+.modal-clear-btn {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* expanded list--button--apply button*/
+.modal-apply-btn {
+    background: #333; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Vet Card */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Grid layout (3×3). 
+   Not working properly — not sure why yet. */
+.vet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+.vet-card-link {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* no default blue link color */
+    display: block; 
+}
+/* Doctor card — base styling */
+.vet-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+/* Doctor card — hover effect */
+.vet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+/* Doctor card — top section */
+.vet-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+/* Doctor card — avatar */
+.vet-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Doctor card — info block */
+.vet-info {
+    flex-grow: 1; /* take remaining space */
+}
+/* Doctor card — doctor name */
+.vet-name-list {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: #4A8FE7;
+    margin-bottom: 3px;
+}
+/* Doctor card — specialty & rating */
+.vet-title-list, .vet-rating {
+    font-size: 14px;
+    color: #666;
+}
+/* Doctor card — right arrow */
+.next-icon {
+    font-size: 30px;
+    color: #ccc;
+    font-weight: 200;
+}
+/* Doctor card — feature tags */
+.vet-features {
+    margin-bottom: 20px;
+}
+/* Doctor card — area good at*/
+.feature-item {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+/* Doctor card — timeslot container */
+.vet-timeslot-section {
+    background: #E6EDF8; 
+    margin: 0 -20px; 
+    padding: 20px 0; 
+    border-radius: 0 0 12px 12px; 
+    text-align: center; 
+}
+/* Doctor card — timeslot list (vertical) */
+.vet-time-slots {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center; 
+}
+/* “See more timeslots” link */
+.more-slots {
+    font-size: 13px; 
+    color: #007bff; 
+    font-weight: 500; 
+    text-decoration: underline; 
+    margin-top: 15px; 
+    display: inline-block; 
+}
+/* Doctor card — expanded timeslot buttons */
+.vet-time-slots button {
+    background: white; 
+    border: 1px solid #e0e0e0; 
+    color: #333;
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 15px; 
+    font-weight: 600; 
+    width: 90%; 
+    max-width: 250px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+}
+
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+@media (max-width: 768px) {
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Global and Header adjustments */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .header {
+        padding: 10px 15px; /* 缩小 Header 侧边距 */
+    }
+    .logo-img {
+        height: 30px; /* 缩小 Logo 图片高度 */
+    }
+    .tag-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .login-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Main page spacing adjustments */
+    .vets-list-page {
+        padding: 20px 15px; /* Reduce left/right padding */
+    }
+    .vets-list-page h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Filter section adjustments */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .filters {
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow buttons to wrap onto multiple lines */
+    }
+    .filter-btn-Dog, .filter-btn-Allergies, .filter-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .full-filter-list {
+        padding: 15px;
+    }
+    .filter-options {
+        gap: 8px;
+    }
+    .modal-filter-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+     
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Vet card list */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .vet-grid {
+        /* Change 3-column layout to 1-column */
+        grid-template-columns: 1fr; 
+        gap: 20px; /* Reduce spacing between cards */
+    }
+    .vet-card {
+        width: 100%; 
+        padding: 15px 15px 0 15px;
+    }
+    .vet-header {
+        gap: 10px; /* Reduce spacing between avatar & text */
+        padding-bottom: 10px;
+    }
+    .vet-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    .vet-name-list {
+        font-size: 16px;
+    }
+    .vet-title-list, .vet-rating {
+        font-size: 12px;
+    }
+    .next-icon {
+        font-size: 20px;
+    }
+
+    /* Timeslot section adjustments */
+    .vet-timeslot-section {
+        margin: 0 -15px; 
+        padding: 15px 0;
+    }
+    .vet-time-slots button {
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 95%; /* wider buttons for small screens */
+        max-width: 300px;
+    }
+    /* Expanded timeslot layout */
+    .additional-slots {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px 20px 15px;
+        gap: 10px;
+    }
+    .full-slot-btn {
+        background: white;
+        border: 1px solid #e0e0e0;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+        flex-grow: 1; 
+        min-width: 120px; /* Prevent buttons from being too narrow */
+    }
+}
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  VET DETAIL PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Back button */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.back-btn {
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #ffffffc9;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+}
+.back-btn:hover {
+    background: #f3f3f3;
+    border-color: #999;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Main layout */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.vet-detail-page {
+    max-width: 1350px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Left–right column layout */
+.vet-detail-left {
+    width: 65%;
+}
+
+.vet-detail-right {
+    width: 35%;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Doctor information */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.detail-profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+/* avatar */
+.detail-avatar-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Name + tags */
+.detail-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+/* Professional title */
+.detail-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+/* Features (Prescription, Mandarin) */
+.detail-features-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+/* Features (Prescription, Mandarin) 外面的绿色圈 */
+.badge-feature {
+    background: #E8F5E9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #2E7D32;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/* Description text */
+.detail-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+}
+.detail-section h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+/* Licenses text */
+.licenses-section p {
+    font-size: 15px;
+    color: #555;
+}
+/* species tag buttons */
+.species-list {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+.species-tag {
+    background: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Review */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.reviews-header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review-star-icon {
+    color: #F7C800;
+}
+/* Review grid: 3*3 style */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+/* Review card */
+.review-card {
+    background: white;
+    padding: 15px 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* text */
+.review-text-detail {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.review-user-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* avatar */
+.avatar-detail {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #E6EDF8;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* username + date */
+.username-detail {
+    font-size: 14px;
+    font-weight: 700;
+}
+.review-date {
+    font-size: 12px;
+    color: #777;
+}
+/* See more reviews */
+.see-more-reviews {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Review */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Booking Card */
+.booking-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+.booking-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Time slots buttons */
+.time-slots-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.slot-button {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+/* 假装选中的按钮 */
+.slot-button.active {
+    border-color: #F7D774;
+    color: #F4A100;
+}
+/* Hover */
+.slot-button:hover {
+    border-color: #F7D774;
+}
+
+/* Booking button */
+.booking-btn {
+    margin-top: 25px;
+    width: 100%;
+    background: #F7D774;
+    border: none;
+    padding: 16px 0;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.booking-btn:hover {
+    background: #f4c647;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media (max-width: 768px) {
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* main layout:row to column */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .vet-detail-page {
+        flex-direction: column;
+        padding: 10px 20px;
+        margin: 20px auto;
+        gap: 25px;
+    }
+  
+    /* 左侧与右侧改为 100% 宽度 */
+    .vet-detail-left,
+    .vet-detail-right {
+        width: 100%;
+    }
+
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /*back button adjustment*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .back-btn {
+        top: 80px;
+        left: 15px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* doctor info */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* smaller avatar */
+    .detail-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .detail-avatar-img {
+        width: 100px;
+        height: 100px;
+    }
+    .detail-info h2 {
+        font-size: 22px;
+    }
+    .detail-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .badge-feature {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    .detail-description {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 5px;
+    }
+    .species-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .species-tag {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Review:3 columns to 1 */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .review-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .review-card {
+        padding: 12px 15px;
+    }
+
+    .review-text-detail {
+        font-size: 13px;
+    }
+
+    .avatar-detail {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .username-detail {
+        font-size: 13px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Booking card lower and smaller */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .booking-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+    .booking-card h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .slot-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .booking-btn {
+        padding: 14px 0;
+        font-size: 16px;
+        border-radius: 24px;
+    }
+}
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  REVIEWS PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+.reviews-page .review-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+.sticky-booking {
+    position: sticky;
+    top: 120px;   /* stick on the top  */
+}
+
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media (max-width: 768px) {
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* row to column */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .vet-detail-page {
+        flex-direction: column;
+        padding: 10px 20px;
+        margin: 20px auto;
+        gap: 25px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /*back btn adjustment*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .back-btn {
+        top: 80px;
+        left: 15px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Review: 3 columns to 1*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .review-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .review-card {
+        padding: 12px 15px;
+    }
+
+    .review-text-detail {
+        font-size: 13px;
+    }
+
+    .avatar-detail {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .username-detail {
+        font-size: 13px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Booking card lower and smaller */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .booking-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+    .booking-card h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .slot-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .booking-btn {
+        padding: 14px 0;
+        font-size: 16px;
+        border-radius: 24px;
+    }
+}
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  BOOKING PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+/* ============================= */
+/* Left Section  */
+/* ============================= */
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Left side — upper section*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* tittle*/
+.booking-title {
+    margin-bottom: 25px;
+}
+/* Whole appointment info block */
+.booking-section {
+    margin-bottom: 30px;
+}
+/* Section subtitles */
+.booking-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Rows (each label + input group) */
+.booking-row {
+    margin-bottom: 20px;
+}
+.booking-label {
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.booking-date {
+    font-size: 20px;
+    color: #7a7a7a;
+}
+/* Required badge */
+.required-text {
+    background-color: rgba(252, 169, 169, 0.46);
+    color: #e66;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+/*input*/
+.booking-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+/* Larger text box for “Reason for visit” */
+.booking-input-reason {
+    width: 100%;
+    padding: 12px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Left side — lower section (Payment)*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Payment row */
+.payment-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.booking-input-small {
+    flex: 0.4;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.booking-input-large {
+    flex: 0.6;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* ============================= */
+/* Right Section */
+/* ============================= */
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Right side — doctor information */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Doctor photo */
+.booking-page .detail-avatar-img {
+    width: 200px;
+    height: 150px;
+    border-radius: 20%;
+}
+/* Doctor header (avatar + text) */
+.doctor-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+/* Doctor name */
+.booking-page .doctor-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+/* Doctor title (DVM) */
+.booking-page .doctor-title {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* 绿色标签（Prescription / Mandarin）*/
+.booking-page .doctor-features {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/*Price Details*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+.total-row {
+    margin-top: 10px;
+}
+.price-divider {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+/* Confirm button */
+.booking-confirm-btn {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+@media (max-width: 768px) {
+
+    /* row to column */
+    .vet-detail-page,
+    .booking-layout,
+    .video-container {
+        flex-direction: column;
+    }
+
+    /* 让 payment row from row to column */
+    .payment-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .booking-input-small,
+    .booking-input-large {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Add spacing so the input fields don’t touch the edge */
+    .booking-section {
+        padding-right: 10px;
+    }
+
+    .booking-row {
+        margin-bottom: 16px;
+    }
+
+    .booking-input,
+    .booking-input-reason {
+        font-size: 14px;
+    }
+}
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  VIDEO CALL PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #faf7ef;
+    margin: 0;
+}
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* confirmation area */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.confirmation-box {
+    display: flex;
+    align-items: center;
+    margin: 50px 200px;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.checkmark {
+    font-size: 28px;
+    color: #27ae60;
+}
+
+.title-line {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.subtitle-line {
+    font-size: 20px;
+    margin: 0;
+}
+
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* video chat area  */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.video-chat-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1250px;
+}
+
+/* img(left side) */
+.video-area {
+    width: 600px;
+    height: 580px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.video-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* chat area(right side) */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.chat-area {
+    width: 420px;
+    height: 580px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+}
+.chat-header {
+    font-weight: 700;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ececec;
+}
+/* Chat message area: scrollable without pushing the input bar */
+.chat-messages {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+/* Each message row (including avatar + bubble + time) */
+.msg-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+/* Left message (doctor) */
+.msg-left {
+    justify-content: flex-start;
+}
+
+/* Right message (user) */
+.msg-right {
+    justify-content: flex-end;
+}
+
+/* avatar */
+.avatar-videochat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Bubble container — controls max width */
+.msg-text {
+    max-width: 65%;
+}
+/* Base bubble style */
+.bubble {
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+/* Left-side grey bubble */
+.bubble-left {
+    background: #f5f5f5;
+}
+/* Right-side yellow bubble */
+.bubble-right {
+    background: #fbe9a7;
+}
+
+/* Timestamp */
+.time {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+/* For left messages: timestamp sticks to the right side */
+.time-right {
+    align-self: flex-start;
+}
+/* For right messages: timestamp sticks to the left side */
+.time-left {
+    align-self: flex-start;
+}
+
+/* Fixed input bar at the bottom */
+.chat-input-box {
+    border-top: 1px solid #ececec;
+    padding: 10px 15px;
+}
+.chat-input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+.chat-input-box input:focus {
+    outline: none;
+    border-color: #f7d774;
+}
+/* Remove default outline and highlight the border when focused */
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Ensure footer does not cause extra scrolling */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.footer {
+    margin-top: 40px;
+}
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media (max-width: 768px) {
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* confirmation part */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .confirmation-box {
+    display: flex;
+    align-items: center;
+    margin: 60px 200px;
+    margin-bottom: 10px;
+    gap: 15px;   
+    }
+ 
+    .checkmark {
+    font-size: 13px;
+    color: #27ae60;
+    }
+
+    .title-line {
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0;
+    }
+
+    .subtitle-line {
+    font-size: 12px;
+    margin-top: -5px;
+    }
+    
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* left right to 1*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .video-chat-wrapper {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    .video-area {
+        width: 100%;
+        height: 350px; 
+        max-height: 550px; 
+        border-radius: 16px;
+    }
+    .video-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* remove chat area to bottom */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    .chat-area {
+        width: 100%;
+        height: 250px;
+        border-radius: 16px;
+        border: 1px solid #e1e1e1;
+    }
+    .chat-header {
+    font-weight: 700;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ececec; 
+    }
+    /* Limit max height of chat messages (prevent overly long area) */
+    /* reduce chat text size*/
+    .chat-messages {
+        max-height: 350px;
+    }
+    /* shorter input bar */
+    .chat-input-box {
+        padding: 8px 18px;
+    }
+    .chat-input-box input {
+        padding: 8px;
+        font-size: 12px;
+    }
+    /*smaller chat bubble*/
+    .bubble {
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+    /* tighten top confirmation box */
+    .confirmation-box {
+        margin: 30px 20px 10px 20px;
+    }
+}
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  LOG IN PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* global*/ 
+/*Use body.xxx-page structure to ensure each page’s styles are isolated,
+avoid change other pages*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+body.login-page {
+    background-color: #faf7ef;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;  
+}
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* Logo */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+body.login-page .login-logo-img {
+    width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-left: 400px;
+}
+/* Slogan */
+body.login-page .login-subtitle {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #444;
+    font-weight: 700;
+}
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* INPUT */
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+body.login-page .login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+/* Input field */
+body.login-page .login-input {
+    width: 350px;
+    padding: 14px 18px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.08);
+}
+body.login-page .login-input::placeholder {
+    color: #c8c8c8;
+}
+
+/* login button*/
+body.login-page .login-btn {
+    width: 200px;
+    padding: 12px 0;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: #f7d774;
+    color: #8b5a00;
+    font-weight: 700;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+body.login-page .login-btn:hover {
+    background: #f6ce5f;
+}
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media (max-width: 768px) {
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* MAIN */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    body.login-page {
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Logo */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    body.login-page .login-logo-img {
+        width: 80%;         /* samller logo look nicely on mobile */
+        margin: 0 auto;     
+        transform: none;    /* Ensure no leftover translation */
+    }
+    /* slogan */
+    body.login-page .login-subtitle {
+        font-size: 20px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Input box */
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    body.login-page .login-box {
+        gap: 18px;
+    }
+    /* Input fields smaller and fill mobile width */
+    body.login-page .login-input {
+        width: 85%;
+        padding: 12px 14px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+    /* Login button smaller */
+    body.login-page .login-btn {
+        width: 100px;
+        padding: 12px 14px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+/* ________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁________________________▷♡◁ */
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🏥💊🩺💖✨💉🧡🚑⚕️💚🌟💙❤️‍🩹🏥💊🩺 */
+/*  PROFILE PAGE */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* LEFT SIDE*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* vet detail card*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.vet-detail-left {
+    text-align: left;
+}
+.profile-card {
+    background: white;
+    padding: 25px 25px 20px 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+.profile-row {
+    margin-bottom: 22px;
+}
+.profile-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.profile-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* payment card*/
+.profile-payment-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.profile-input-small {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.profile-input-large {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+/* RIGHT SIDE*/
+/* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.profile-id-box {
+    margin-top: 25px;
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+.profile-section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ★～☆～★～☆～★～☆～★～☆～★★～☆～★～☆～★～☆～★～☆～★ */
+/* 🌈🌟💖✨🧡💚💜✨💛💙❤️🌟🌈 */
+/*  MOBILE RESPONSIVENESS (Max Width 768px) */
+/* ★～☆～★～☆～★～☆～★～☆～★ ★～☆～★～☆～★～☆～★～☆～★*/
+@media (max-width: 768px) {
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* MAIN*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* left right → 1 column */
+    body.profile-page .vet-detail-page {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    /* Right side goes first */
+    body.profile-page .vet-detail-right {
+        order: 1;
+    }
+    /* Left side goes second */
+    body.profile-page .vet-detail-left {
+        order: 2;
+    }
+    /* Both sides take full width */
+    body.profile-page .vet-detail-left,
+    body.profile-page .vet-detail-right {
+        width: 100%;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* vet detail card*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    body.profile-page .profile-section-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    /* Card: smaller padding + softer shadow */
+    body.profile-page .profile-card {
+        padding: 18px 18px 15px 18px;
+        border-radius: 14px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        margin-bottom: 22px;
+    }
+    /* Reduce spacing between rows */
+    body.profile-page .profile-row {
+        margin-bottom: 18px;
+    }
+    /* Label smaller */
+    body.profile-page .profile-label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    /* input padding & font smaller */
+    body.profile-page .profile-input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* PAYMENT detail card*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* Payment row to vertical */
+    body.profile-page .profile-payment-row {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+    }
+    body.profile-page .profile-input-small,
+    body.profile-page .profile-input-large {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+
+
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* profile detail*/
+    /* ★~☆·☆。~*∴*~★*∴ *·∴~*★*∴*★~☆·☆  */
+    /* smaller avatar */
+    body.profile-page .profile-avatar {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 10px auto;
+    }
+    /* smaller id to fit mobile */
+    body.profile-page .profile-id-box {
+        padding: 10px 12px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}

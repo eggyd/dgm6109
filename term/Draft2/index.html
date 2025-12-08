@@ -37,7 +37,7 @@
         <!-- White card background that holds the SVG -->
         <div class="viz-card">
             <!-- <div id="canvas"></div> -->
-             <div id="canvas" style="width:100%; max-width:100%; overflow-x:auto;"></div>
+             <div id="canvas" style="width:100%; overflow-x:scroll; overflow-y:scroll;"></div>
 
         </div>
     </div>
@@ -45,24 +45,42 @@
     <!-- Explanation paragraph (analysis + reason) -->
     <div class="paragraph-card">
     <p style="line-height:1.6;">
-        I collected six days of data, from October 17 to 22. Each record includes three values:
+         I collected six days of data, from October 17 to 22. Each record included three main values:
         <br><br>
-        1. Personality types (5 total)<br>
+        1. Personality type (5 total: INFP, INFJ, ISFJ, ENFP, ESTJ)<br>
         2. Music listening duration (in minutes)<br>
         3. Mood level from 0 to 5
         <br><br>
-        I also collected stress levels, focus levels, and music genres. However, I didn’t include them in the final visualization because adding too many variables would make the design crowded and harder to read.
+
+        I also collected stress levels, focus levels, and music genres. However, I chose not to include them in the final visualization because adding too many variables would make the design crowded and harder to read.
         <br><br>
-        Stress level and focus level were both recorded on the same 0–5 scale as mood, and they behaved very similarly in the dataset. So if I added them, the visualization would show several variables that look almost identical, which does not create meaningful new insights.
+
+        Stress and focus levels were recorded on the same 0–5 scale as mood, and in my dataset they behaved very similarly. Including them would have introduced redundant information without adding meaningful insight.
         <br><br>
-        Music genres were interesting, but they require an additional interaction design, such as hover tooltips or filtering, so the viewer can explore them without making the main chart messy. Because of time limits, I was not able to implement this interaction cleanly, so I decided to leave genres out of the final version.
+
+        Music genres were interesting, but they require additional interaction design—such as hover tooltips or filtering—to avoid overwhelming the visualization. Because I did not have enough time to implement this cleanly, I decided to leave genres out of the final version.
         <br><br>
+
         From the results:<br>
-        Introverted types (INFP, INFJ, ISFJ) generally listened longer.<br>
-        Extroverted types (ENFP, ESTJ) listened less.<br>
-        But surprisingly, mood values for all personality types were very similar.
+        • Introverted types (INFP, INFJ, ISFJ) generally listened to music for longer periods.<br>
+        • Extroverted types (ENFP, ESTJ) listened for shorter periods.<br>
+        • Mood values across all personality types were surprisingly similar.
         <br><br>
-        So my hypothesis about listening duration was supported, but the mood differences were not.
+
+        Therefore, my hypothesis about listening duration was supported, but my expectation about mood differences was not.
+        <br><br>
+
+        <strong>Conclusion</strong><br>
+        In the end, this project taught me more than just how to visualize data. I learned how important structure is when writing a visualization: not to build code where one small change breaks everything, but to design the system so that each part can change independently.
+        <br><br>
+
+        Separating the heart-drawing logic from the data logic was especially helpful. It made my project easier to understand, easier to debug, and easier to update. This is something I will keep using in future coding work.
+        <br><br>
+
+        One thing I wish I had more time for was designing a proper way to visualize music genres. There are so many interesting categories, but I didn’t want to force them into the chart without a clean design. Even though the final version doesn’t include genres, exploring that idea helped me understand my data better.
+        <br><br>
+
+        Overall, the project helped me improve both my design thinking and my coding structure, and I’m happy with what I achieved.
     </p>
 </div>
 

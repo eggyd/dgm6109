@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Listening Hours & Happiness Across Personality Types</title>
+    
+    <!-- D3.js -->
+    <script src="d3.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+<!-- Top content container (title + hypothesis) -->
+    <div class="page-container">
+        <!-- Page title -->
+        <h1 style="text-align:center; margin-bottom:10px;">
+            Music Listening Hours & Happiness Across Personality Types
+            <br>
+            <span style="font-size:18px; color:#555;">
+            </span>
+        </h1>
+        <!-- Hypothesis explanation card -->
+        <div class="hypothesis-card">
+            <strong>Hypothesis：</strong>
+            <p style="line-height:1.6;">
+            Different personality types may influence both how long people listen to music and how they feel while listening.
+            </p>
+        </div>
+    </div>
+
+
+  <!-- Visualization wrapper (centers the SVG area) -->
+    <div class="viz-wrapper">
+        <!-- White card background that holds the SVG -->
+        <div class="viz-card">
+            <!-- <div id="canvas"></div> -->
+             <div id="canvas" style="width:100%; max-width:100%; overflow-x:auto;"></div>
+
+        </div>
+    </div>
+
+    <!-- Explanation paragraph (analysis + reason) -->
+    <div class="paragraph-card">
+    <p style="line-height:1.6;">
+        I collected six days of data, from October 17 to 22. Each record includes three values:
+        <br><br>
+        1. Personality types (5 total)<br>
+        2. Music listening duration (in minutes)<br>
+        3. Mood level from 0 to 5
+        <br><br>
+        I also collected stress levels, focus levels, and music genres. However, I didn’t include them in the final visualization because adding too many variables would make the design crowded and harder to read.
+        <br><br>
+        Stress level and focus level were both recorded on the same 0–5 scale as mood, and they behaved very similarly in the dataset. So if I added them, the visualization would show several variables that look almost identical, which does not create meaningful new insights.
+        <br><br>
+        Music genres were interesting, but they require an additional interaction design, such as hover tooltips or filtering, so the viewer can explore them without making the main chart messy. Because of time limits, I was not able to implement this interaction cleanly, so I decided to leave genres out of the final version.
+        <br><br>
+        From the results:<br>
+        Introverted types (INFP, INFJ, ISFJ) generally listened longer.<br>
+        Extroverted types (ENFP, ESTJ) listened less.<br>
+        But surprisingly, mood values for all personality types were very similar.
+        <br><br>
+        So my hypothesis about listening duration was supported, but the mood differences were not.
+    </p>
+</div>
+
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

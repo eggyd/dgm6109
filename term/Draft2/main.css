@@ -24,6 +24,7 @@ body {
 .hypothesis-card {
     background: white;
     padding: 20px 30px;
+    font-size: 18px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-top: 20px;
@@ -35,6 +36,7 @@ body {
     background: white;
     padding: 20px 30px;
     border-radius: 10px;
+    font-size: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-top: 20px;
     margin-bottom: 40px;
@@ -47,7 +49,7 @@ body {
 /* Global font settings for body/svg/text */
 body, svg, text {
     font-family: "Nunito", Helvetica, Arial, sans-serif;
-    color: #6f5c5d;    /* 柔和灰粉（正文） */
+    color: #6f5c5d;   
 }
 
 .viz-wrapper {
@@ -124,7 +126,7 @@ h1 span {
         width: 95%;
     }
     .viz-card {
-        width: 100%;
-        padding: 10px;
+        width: 1400px;
+        padding: 30px;
     }
 }

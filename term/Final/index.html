@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Listening Hours & Happiness Across Personality Types</title>
+    
+    <!-- D3.js -->
+    <script src="d3.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+<!-- Top content container (title + hypothesis) -->
+    <div class="page-container">
+        <!-- Page title -->
+        <h1 style="text-align:center; margin-bottom:10px;">
+            Music Listening Hours & Happiness Across Personality Types
+            <br>
+            <span style="font-size:18px; color:#555;">
+            </span>
+        </h1>
+        <!-- Hypothesis explanation card -->
+        <div class="hypothesis-card">
+            <strong>Hypothesis：</strong>
+            <p style="line-height:1.6;">
+            Different personality types may influence both how long people listen to music and how they feel while listening.
+            </p>
+        </div>
+    </div>
+
+
+  <!-- Visualization wrapper (centers the SVG area) -->
+    <div class="viz-wrapper">
+        <!-- White card background that holds the SVG -->
+        <div class="viz-card">
+            <!-- <div id="canvas"></div> -->
+             <div id="canvas" style="width:100%; overflow-x:scroll; overflow-y:scroll;"></div>
+
+        </div>
+    </div>
+
+    <!-- Explanation paragraph (analysis + reason) -->
+    <div class="paragraph-card">
+    <p style="line-height:1.6;">
+         I collected six days of data, from October 17 to 22. Each record included three main values:
+        <br><br>
+        1. Personality type (5 total: INFP, INFJ, ISFJ, ENFP, ESTJ)<br>
+        2. Music listening duration (in minutes)<br>
+        3. Mood level from 0 to 5
+        <br><br>
+
+        I also collected stress levels, focus levels, and music genres. However, I chose not to include them in the final visualization because adding too many variables would make the design crowded and harder to read.
+        <br><br>
+
+        Stress and focus levels were recorded on the same 0–5 scale as mood, and in my dataset they behaved very similarly. Including them would have introduced redundant information without adding meaningful insight.
+        <br><br>
+
+        Music genres were interesting, but they require additional interaction design—such as hover tooltips or filtering—to avoid overwhelming the visualization. Because I did not have enough time to implement this cleanly, I decided to leave genres out of the final version.
+        <br><br>
+
+        From the results:<br>
+        • Introverted types (INFP, INFJ, ISFJ) generally listened to music for longer periods.<br>
+        • Extroverted types (ENFP, ESTJ) listened for shorter periods.<br>
+        • Mood values across all personality types were surprisingly similar.
+        <br><br>
+
+        Therefore, my hypothesis about listening duration was supported, but my expectation about mood differences was not.
+        <br><br>
+
+        <strong>Conclusion</strong><br>
+        In the end, this project taught me more than just how to visualize data. I learned how important structure is when writing a visualization: not to build code where one small change breaks everything, but to design the system so that each part can change independently.
+        <br><br>
+
+        Separating the heart-drawing logic from the data logic was especially helpful. It made my project easier to understand, easier to debug, and easier to update. This is something I will keep using in future coding work.
+        <br><br>
+
+        One thing I wish I had more time for was designing a proper way to visualize music genres. There are so many interesting categories, but I didn’t want to force them into the chart without a clean design. Even though the final version doesn’t include genres, exploring that idea helped me understand my data better.
+        <br><br>
+
+        Overall, the project helped me improve both my design thinking and my coding structure, and I’m happy with what I achieved.
+    </p>
+</div>
+
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+[
+  {
+    "date": "2025-10-17",
+    "personality": "INFP",
+    "duration": 28.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "INFP",
+    "duration": 75.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "INFJ",
+    "duration": 18.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "INFJ",
+    "duration": 33.0,
+    "mood": 3.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "INFJ",
+    "duration": 26.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ESTJ",
+    "duration": 40.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ENFP",
+    "duration": 20.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ENFP",
+    "duration": 30.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ENFP",
+    "duration": 25.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ISFJ",
+    "duration": 22.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ISFJ",
+    "duration": 60.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-17",
+    "personality": "ISFJ",
+    "duration": 35.0,
+    "mood": 5.0
+  },
+
+
+
+
+  {
+    "date": "2025-10-18",
+    "personality": "INFP",
+    "duration": 28.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "INFP",
+    "duration": 90.0,
+    "mood": 3.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "INFP",
+    "duration": 73.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "INFJ",
+    "duration": 30.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "INFJ",
+    "duration": 20.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "INFJ",
+    "duration": 38.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ESTJ",
+    "duration": 50.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ENFP",
+    "duration": 7.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ENFP",
+    "duration": 35.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ENFP",
+    "duration": 20.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ISFJ",
+    "duration": 20.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ISFJ",
+    "duration": 55.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-18",
+    "personality": "ISFJ",
+    "duration": 38.0,
+    "mood": 5.0
+  },
+
+
+
+
+  {
+    "date": "2025-10-19",
+    "personality": "INFP",
+    "duration": 32.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "INFP",
+    "duration": 80.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "INFJ",
+    "duration": 15.0,
+    "mood": 3.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "INFJ",
+    "duration": 45.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "INFJ",
+    "duration": 34.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ESTJ",
+    "duration": 45.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ENFP",
+    "duration": 20.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ENFP",
+    "duration": 28.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ISFJ",
+    "duration": 21.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ISFJ",
+    "duration": 65.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-19",
+    "personality": "ISFJ",
+    "duration": 26.0,
+    "mood": 5.0
+  },
+
+
+
+
+  {
+    "date": "2025-10-20",
+    "personality": "INFP",
+    "duration": 29.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "INFP",
+    "duration": 85.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "INFJ",
+    "duration": 24.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "INFJ",
+    "duration": 32.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "INFJ",
+    "duration": 21.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ESTJ",
+    "duration": 20.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ESTJ",
+    "duration": 50.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ENFP",
+    "duration": 20.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ENFP",
+    "duration": 30.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ENFP",
+    "duration": 27.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ISFJ",
+    "duration": 20.0,
+    "mood": 5.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ISFJ",
+    "duration": 70.0,
+    "mood": 4.0
+  },
+  {
+    "date": "2025-10-20",
+    "personality": "ISFJ",
+    "duration": 34.0,
+    "mood": 5.0
+  },
+
+
+
+
+  {
+    "date": "2025-10-21",
+    "personality": "INFP",
+    "duration": 31,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "INFP",
+    "duration": 70,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "INFP",
+    "duration": 20,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "INFJ",
+    "duration": 12,
+    "mood": 3
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "INFJ",
+    "duration": 40,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "INFJ",
+    "duration": 55,
+    "mood": 5
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ESTJ",
+    "duration": 45,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ENFP",
+    "duration": 20,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ENFP",
+    "duration": 28,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ENFP",
+    "duration": 26,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ISFJ",
+    "duration": 21,
+    "mood": 5
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ISFJ",
+    "duration": 62,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-21",
+    "personality": "ISFJ",
+    "duration": 37,
+    "mood": 5
+  },
+
+    {
+    "date": "2025-10-22",
+    "personality": "INFP",
+    "duration": 30,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "INFP",
+    "duration": 78,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "INFJ",
+    "duration": 35,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "INFJ",
+    "duration": 31,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "INFJ",
+    "duration": 50,
+    "mood": 5
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "INFJ",
+    "duration": 24,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ESTJ",
+    "duration": 48,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ENFP",
+    "duration": 20,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ENFP",
+    "duration": 29,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ENFP",
+    "duration": 24,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ISFJ",
+    "duration": 20,
+    "mood": 5
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ISFJ",
+    "duration": 72,
+    "mood": 4
+  },
+  {
+    "date": "2025-10-22",
+    "personality": "ISFJ",
+    "duration": 33,
+    "mood": 5
+  }
+
+
+]
